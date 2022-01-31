@@ -14,7 +14,15 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => {};
+let filter = (arr, pred) => {
+  let result = [];
+  for (const e of arr) {
+    if (pred(e)) {
+      result.push(e);
+    }
+  }
+  return result;
+};
 
 console.log('filter success #1:', filter([1, 2, 3, 4, 5, 4, 4], isEven) === [2, 4, 4, 4]);
 console.log('filter success #2:', filter([1, 2, 3, 4, 5, 4, 4], isOdd) === [1, 3, 5]);
@@ -24,7 +32,13 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => {};
+let map = (arr, func) => {
+  let result = [];
+  for (const e of arr) {
+    result.push(func(e))
+  }
+  return result;
+};
 
 console.log('map success #1:', map([1, 2, 3, 4, 5, 4, 4], plusOne) === [2, 3, 4, 5, 6, 5, 5]);
 console.log('map success #2:', map([1, 2, 3, 4, 5, 4, 4], timesThree) === [3, 6, 9, 12, 15, 12, 12]);
@@ -49,7 +63,14 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
+let reduce = (arr, func, initial) => {
+  let result = initial;
+  for (const e of arr) {
+    result = func(result, e);
+  }
+  return result;
+
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -62,6 +83,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {};
+let sumSquares = (arr) => arr.map((x) => x ** 2).reduce(add);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
