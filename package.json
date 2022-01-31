@@ -14,7 +14,8 @@
   "eslintConfig": {
     "extends": "airbnb",
     "globals": {
-      "L": "readonly"
+      "L": "readonly",
+      "_": "readonly"
     },
     "rules": {
       "no-console": "off",
