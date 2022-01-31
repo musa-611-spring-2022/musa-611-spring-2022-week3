@@ -33,7 +33,7 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  let newArr;
+  let newArr = [];
   arr.forEach((a) => {
     newArr.push(func(a));
   });
@@ -80,8 +80,8 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let add = (x, y) => x + y;
-let multiply = (x, y) => x * y;
+// let add = (x, y) => x + y;
+// let multiply = (x, y) => x * y;
 
 // let sumSquares = (arr) => reduce(map(arr, plusOne), add);
 
