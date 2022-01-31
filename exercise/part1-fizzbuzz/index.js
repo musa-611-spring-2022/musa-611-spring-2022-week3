@@ -24,6 +24,25 @@ Believe it or not, this is a common programming challenge in job interviews!
 Start code
 
 ===================== */
+for (let i = 0; i < 101; i ++) {
+	console.log(i);
+};
+
+for (let i = 0; i < 101; i ++) {
+	if (i % 3 === 0) {
+		console.log('Fizz');
+		continue;
+	};
+	if (i % 5 === 0) {
+		console.log('Buzz');
+		continue;
+	};
+	if (i % 3 === 0 && i % 5 === 0) {
+		console.log('FizzBuzz');
+	};
+	console.log(i);
+};
+
 
 
 
