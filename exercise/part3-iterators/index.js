@@ -92,7 +92,6 @@ Instructions: Write a function which takes an array and returns the product of
   reduceProduct function MUST use the multiply function and MUST NOT change the
   original array.
 ===================== */
-
 let multiply = (x, y) => x * y;
 let reduceProduct = (arr) => arr.reduce(multiply, 1);
 
