@@ -11,7 +11,11 @@ in years. (Let's just assume this person was born January 1 at 12:01 AM)
 Example: "age(2000) should return 22"
 ===================== */
 
-let age = (birthYear) => {};
+let curYear = new Date().getFullYear();
+
+let age = (birthYear) => {
+    return(curYear - birthYear);
+};
 
 console.log('age success:', age(1971) === 51);
 
@@ -20,7 +24,9 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = () => {};
+let plusOne = (i) => {
+    return(i + 1);
+};
 
 console.log('plusOne success:', plusOne(99) === 100);
 
@@ -29,7 +35,9 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = () => {};
+let timesThree = (i) => {
+    return(i * 3);
+};
 
 console.log('timesThree success:', timesThree(33) === 99);
 
@@ -38,7 +46,9 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = () => {};
+let add = (i, j) => {
+    return(i + j);
+};
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -47,7 +57,9 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = () => {};
+let multiply = (i, j) => {
+    return(i * j);
+};
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
