@@ -62,11 +62,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let timesThree = (n) => n * 3;
 let mapTriple = (arr) => arr.map(timesThree);
 
-<<<<<<< HEAD
-console.log('mapTriple success:', mapTriple([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
-=======
 console.log('mapTriple success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
->>>>>>> 68fcafdb620e6d08d1da770a6f30bf2237740695
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
