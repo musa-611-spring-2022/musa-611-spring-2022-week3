@@ -72,7 +72,7 @@ Instructions: Write a function which takes an array and returns the sum of all
 ===================== */
 
 let add = (n1, n2) => n1 + n2;
-let reduceSum = (arr) => arr.reduce(add);
+let reduceSum = (arr) => arr.reduce(add, preciousValue = 0);
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
 
@@ -84,6 +84,6 @@ Instructions: Write a function which takes an array and returns the product of
 ===================== */
 
 let multiply = (n1, n2) => n1 * n2;
-let reduceProduct = (arr) => arr.reduce(multiply);
+let reduceProduct = (arr) => arr.reduce(multiply, preciousValue = 1);
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
