@@ -29,7 +29,7 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = (num) => { return num * 6; };
+let timesThree = (num) => { return num * 3; };
 
 console.log('timesThree success:', timesThree(33) === 99);
 
