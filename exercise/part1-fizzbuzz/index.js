@@ -25,7 +25,24 @@ Start code
 
 ===================== */
 
-const = 'john'
+
+for (let num = 0; num <= 100; num++){
+  if ((0 == num % 3) && (0 == num % 5)){
+  console.log ("FizzBuzz");
+         } else if (0 == num % 5) {
+          console.log("Buzz");
+         } else if (0 == num % 3){
+           console.log("Fizz");
+         } else {
+           console.log (num);
+         }
+      }
+
+
+
+
+
+
 
 
 /* =====================
