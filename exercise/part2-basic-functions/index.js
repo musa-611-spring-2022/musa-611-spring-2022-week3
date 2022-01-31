@@ -39,7 +39,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (num1, num2) => num1 + num2;
+let add = (n1, n2) => n1 + n2;
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -48,7 +48,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (num1, num2) => num1 * num2;
+let multiply = (n1, n2) => n1 * n2;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
