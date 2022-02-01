@@ -12,8 +12,7 @@ Example: "age(2000) should return 22"
 ===================== */
 
 let age = (birthYear) => {
-  youage = 2022 - birthYear
-  return youage;
+  return 2022 - birthYear;
 };
 
 console.log('age success:', age(1971) === 51);
@@ -24,8 +23,7 @@ Example: "plusOne(2) should return 3"
 ===================== */
 
 let plusOne = (newNum) => {
-  newNum ++
-  return newNum;
+  return newNum + 1;
 };
 
 console.log('plusOne success:', plusOne(99) === 100);
@@ -36,8 +34,7 @@ Example: "timesThree(2) should return 6"
 ===================== */
 
 let timesThree = (newNum) => {
-  newNum = newNum * 3
-  return newNum;
+  return newNum * 3;
 };
 
 console.log('timesThree success:', timesThree(33) === 99);
@@ -48,8 +45,7 @@ Example: "add(2, 3) should return 5"
 ===================== */
 
 let add = (newNum1, newNum2) => {
-  newNum = newNum1 + newNum2
-  return newNum;
+  return newNum1 + newNum2;
 };
 
 console.log('add success:', add(4, 6) === 10);
@@ -60,8 +56,7 @@ Example: "multiply(2, 3) should return 6"
 ===================== */
 
 let multiply = (newNum1, newNum2) => {
-  newNum = newNum1 * newNum2
-  return newNum;
+  return newNum1 * newNum2;
 };
 
 console.log('multiply success:', multiply(4, 6) === 24);
@@ -72,8 +67,7 @@ Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return '
 ===================== */
 
 let valueAtIndex = (list, index) => {
-  valueIndex = list[index]
-  return valueIndex;
+  return list[index];
 };
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
@@ -84,11 +78,10 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
 let valueAtKey = (name, value) => {
-  valueKey = name[value]
-  return valueKey;
+  return name[value];
 };
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
@@ -97,9 +90,7 @@ Instructions: Write a function that returns true if a number is even.
 let isEven = (input) => {
   if (input % 2 === 0) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
@@ -111,9 +102,7 @@ Instructions: Write a function that returns true if a number is odd.
 let isOdd = (input) => {
   if (input % 2 === 0) {
     return false;
-  } else {
-    return true;
-  }
+  } return true;
 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
