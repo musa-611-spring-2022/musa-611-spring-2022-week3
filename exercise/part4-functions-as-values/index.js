@@ -37,7 +37,7 @@ Instructions: Write a function which takes an array and returns a new array,
 let map = (arr, func) => {
   let result = [];
   for (const e of arr) {
-    result.push(func(e))
+    result.push(func(e));
   }
   return result;
 };
@@ -71,7 +71,6 @@ let reduce = (arr, func, initial) => {
     result = func(result, e);
   }
   return result;
-
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
