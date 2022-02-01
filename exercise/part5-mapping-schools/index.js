@@ -73,6 +73,8 @@ schoolTypeDict. Which TYPE value represents public schools? (You'll need to know
 this moving forward.)
 ===================== */
 
+// TYPE 1
+
 /* =====================
 Step 2: Prepare the data
 
@@ -83,9 +85,25 @@ high schools (hint: another attribute besides TYPE will be useful...).
 
 let publicHighSchools;
 
+publicHighSchools = schools.filter((school) => school.TYPE === '1'
+  && school.GRADE_LEVEL.includes('HIGH'));
+
 /* =====================
 Step 3: Display the data
 
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+let addMarkerAndPop = (lat, lon, name) => {
+  L.marker([lat, lon])
+    .addTo(map)
+    .bindPopup(`<b>School Name: </b><br>${name}`);
+};
+
+publicHighSchools.forEach((s) => {
+  let lat = s.Y;
+  let lon = s.X;
+  let name = s.SCHOOL_NAME;
+  addMarkerAndPop(lat, lon, name);
+});
