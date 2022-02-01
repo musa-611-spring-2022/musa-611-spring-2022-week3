@@ -16,7 +16,15 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => {};
+let filter = (arr, pred) => {
+  let outcome = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (pred(arr[i])) {
+      outcome.push(arr[i]);
+    }
+  }
+  return outcome;
+};
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));
@@ -26,7 +34,13 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => {};
+let map = (arr, func) => {
+  let outcome = [];
+  for (let i = 0; i < arr.length; i++) {
+    outcome.push(func(arr[i]));
+  }
+  return outcome;
+};
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -51,7 +65,17 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
+
+
+let reduce = (arr, func, initial) => {
+  let result = func(initial, arr[0]);
+  if (arr.length >= 2) {
+    for (let i = 1; i < arr.length; i++) {
+      result = func(result, arr[i]);
+    }
+  }
+  return result;
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -64,6 +88,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {};
+let sumSquares = (arr) => arr.map((arrs) => timesThree(arrs)).reduce(add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
