@@ -18,9 +18,9 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let filter = (arr, pred) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++){
-    if (pred(arr [i])){
-      newArr.push(arr[i])
+  for (let i = 0; i < arr.length; i++) {
+    if (pred(arr[i])) {
+      newArr.push(arr[i]);
     }
   }
   return newArr;
@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let map = (arr, func) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     newArr[i] = func(arr[i]);
   }
   return newArr;
@@ -67,7 +67,7 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
   let newArr = initial;
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     newArr = func(newArr, arr[i]);
   }
   return newArr;
@@ -84,6 +84,8 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
+/*
 let sumSquares = (arr) => {};
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
+*/
