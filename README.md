@@ -48,7 +48,7 @@ For this part of the exercise, you will:
 * Filter data and add it to a map
 
 Follow the same process as with all other exercises so far (i.e., instructions
-are in the [part5-mapping-schools/index.js](part5-mapping-schools/index.js)
+are in the [part5-mapping-schools/index.js](exercise/part5-mapping-schools/index.js)
 file).
 
 #### Submitting your code
