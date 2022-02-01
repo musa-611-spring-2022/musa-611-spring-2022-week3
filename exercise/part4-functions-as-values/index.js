@@ -21,8 +21,8 @@ let filter = (arr, pred) => {
   for (let item of arr) {
     if (pred(item)) {
       arr1.push(item);
-    };
-  };
+    }
+  }
   return arr1;
 };
 
@@ -38,7 +38,7 @@ let map = (arr, func) => {
   let arr1 = [];
   for (let member of arr) {
     arr1.push(func(member));
-  };
+  }
   return arr1;
 };
 
@@ -70,7 +70,7 @@ let reduce = (arr, func, initial) => {
   let accumulation = initial;
   for (let member of arr) {
     accumulation = func(accumulation, member);
-  };
+  }
   return accumulation;
 };
 
@@ -93,7 +93,7 @@ let sumSquares = (arr) => {
   let sumS = 0;
   for (let member of arr) {
     sumS = add(sumS, multiply(member, member));
-  };
+  }
   return sumS;
 };
 
