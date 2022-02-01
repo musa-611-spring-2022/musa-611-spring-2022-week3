@@ -68,10 +68,13 @@ Instructions: Write a function which takes an array and returns the value of
 
 
 let reduce = (arr, func, initial) => {
-  for (let i = 0; i < arr.length; i++) {
-    initial = func(initial, arr[i]);
+  let result = func(initial, arr[0]);
+  if (arr.length >= 2) {
+    for (let i = 1; i < arr.length; i++) {
+      result = func(result, arr[i]);
+    }
   }
-  return initial;
+  return result;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
