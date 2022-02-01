@@ -17,21 +17,19 @@ You can review the concepts raised in the Codecademy exercises in [review.md](re
 
 The chapter on [JavaScript Interactivity](http://132.72.155.230:3838/js/javascript-interactivity.html) from [Introduction to Web Mapping](http://132.72.155.230:3838/js/index.html).
 
-## Exercises
-
-### Tools
-
-* A GitHub account
-* A git client (e.g., the [`git` CLI](https://git-scm.com/downloads), or [GitHub Desktop](https://desktop.github.com/))
-* A code editor with syntax highlighting, such as Atom, VS Code, or Sublime.
-* A browser with a JavaScript console
-
 ### Exercises
 
 Like all previous exercises, this one will be submitted via pull request, and will have automated tests run against it.
 
 1.  Fork this repository to your own GitHub account, and clone it to your computer.
 1.  Run `npm install` if you want to run the tests and linter locally (optional, but highly recommended).
+
+#### Tools
+
+* A GitHub account
+* A git client (e.g., the [`git` CLI](https://git-scm.com/downloads), or [GitHub Desktop](https://desktop.github.com/))
+* A code editor with syntax highlighting, such as Atom, VS Code, or Sublime.
+* A browser with a JavaScript console _and debugger_
 
 #### Part 1-4
 
@@ -40,9 +38,18 @@ Like all previous exercises, this one will be submitted via pull request, and wi
 1.  Open the exercise's `.js` file in your code editor of choice.
 1.  Follow the instructions in the file.
 
-#### Part 5
+#### Part 5: Mapping Schools
 
-Coming soon...
+For this part of the exercise, you will:
+* Use the data in the [data/phl_school_facilities.js](data/phl_school_facilities.js) file
+* Use the debugger in your browser to set a breakpoint to inspect some code's
+  behavior; refer to [breakpoints.md](breakpoints.md) for a visual guide to
+  setting a breakpoint
+* Filter data and add it to a map
+
+Follow the same process as with all other exercises so far (i.e., instructions
+are in the [part5-mapping-schools/index.js](part5-mapping-schools/index.js)
+file).
 
 #### Submitting your code
 
