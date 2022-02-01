@@ -38,7 +38,6 @@ let's explore the data.
 First, we're going to create a dictionary (using a JavaScript object) that
 correlates each school TYPE to an array of TYPE_SPECIFIC values:
 */
-
 const schoolTypeDict = {};
 
 schools.forEach((school) => {
@@ -81,7 +80,13 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = [];
+
+schools.forEach((school) => {
+  if (school.GRADE_LEVEL.includes('HIGH') === true && school.TYPE === '1') {
+    publicHighSchools.push(school);
+  }
+});
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +94,12 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+const addMarker = (lat, lng, name) => {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+};
+
+publicHighSchools.forEach((publicHighSchool) => {
+  addMarker(publicHighSchool.Y, publicHighSchool.X, publicHighSchool.SCHOOL_NAME);
+});
+
