@@ -82,6 +82,9 @@ high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
 let publicHighSchools;
+// Using .filter() populate publicHighSchools
+let publicSchools = schools.filter((school) => school.TYPE === '1');
+publicHighSchools = publicSchools.filter((publicSchool) => publicSchool.GRADE_LEVEL.includes('HIGH'));
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +92,17 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+// iterate over the new dictionary
+for (let pubHigh of publicHighSchools) {
+  let lat = pubHigh.Y;
+  let long = pubHigh.X;
+  let schoolName = pubHigh.SCHOOL_NAME;
+  L.marker([parseFloat(lat), parseFloat(long)]).bindTooltip(schoolName).addTo(map);
+}
+
+
+
+
+
+
