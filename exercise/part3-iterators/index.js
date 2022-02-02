@@ -48,7 +48,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (n) => n + 1 ;
+let plusOne = (n) => n + 1;
 let mapIncrement = (arr) => arr.map((x) => plusOne(x));
 
 console.log('mapIncrement success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [2, 3, 4, 5, 6, 5, 5]);
@@ -63,7 +63,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let timesThree = (n) => n * 3;
 let mapTriple = (arr) => arr.map((x) => timesThree(x));
 
-console.log('mapTriple success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
+console.log('mapTriple success:', mapTriple([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
