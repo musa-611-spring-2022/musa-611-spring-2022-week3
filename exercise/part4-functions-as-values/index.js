@@ -39,7 +39,7 @@ let map = (arr, func) => {
     result[i] = func(arr[i]);
   }
   return result;
-};;
+}; 
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
