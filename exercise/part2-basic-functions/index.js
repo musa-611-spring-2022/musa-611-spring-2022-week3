@@ -38,7 +38,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (a,b) => a + b;
+let add = (a, b) => a + b;
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -47,7 +47,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (a,b) => a * b;
+let multiply = (a, b) => a * b;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
@@ -56,7 +56,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = (arr,a) => arr[a];
+let valueAtIndex = (arr, a) => arr[a];
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -67,7 +67,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (arr, a) => arr[a];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar'}, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
