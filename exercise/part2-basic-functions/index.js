@@ -90,7 +90,7 @@ let isEven = (num) => {
   if (num % 2 === 0) {
     return true;
   } return false;
-  };
+};
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
