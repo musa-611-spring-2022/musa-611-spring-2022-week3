@@ -71,6 +71,8 @@ https://github.com/musa-611-spring-2022/musa-611-spring-2022-week3/blob/main/bre
 In the JavaScript console, run "console.log(schoolTypeDict);" to output the
 schoolTypeDict. Which TYPE value represents public schools? (You'll need to know
 this moving forward.)
+
+#Type 1
 ===================== */
 
 /* =====================
@@ -81,11 +83,21 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = [];
 
+schools.forEach((school) => {
+  let type = school.TYPE;
+  let gradeLevel = school.GRADE_LEVEL;
+  if (type === '1' && gradeLevel.includes('HIGH')) {
+    publicHighSchools.push(school);
+  }
+});
 /* =====================
 Step 3: Display the data
 
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+publicHighSchools.forEach((school) => {
+  L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
+});
