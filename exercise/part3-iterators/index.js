@@ -5,7 +5,8 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions.
+Each exercise here builds on that theme.
 ===================== */
 
 /* =====================
@@ -28,11 +29,9 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isEven = (n) => {
-  if (n % 2 === 0){
+  if (n % 2 === 0) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 };
 let filterEven = (arr) => {
   let anotherArr = arr.filter((single) => isEven(single));
@@ -50,9 +49,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let isOdd = (n) => {
   if (n % 2 === 0) {
     return false;
-  } else {
-    return true;
-  }
+  } return true;
 };
 let filterOdd = (arr) => {
   let anotherArr = arr.filter((single) => isOdd(single));
@@ -68,14 +65,8 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (n) => {
-  n += 1;
-  return n;
-};
-let mapIncrement = (arr) => {
-  arr = arr.map(plusOne);
-  return arr;
-};
+let plusOne = (n) => n + 1;
+let mapIncrement = (arr) => arr.map(plusOne);
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
@@ -86,14 +77,8 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (n) => {
-  n *= 3;
-  return n;
-};
-let mapTriple = (arr) => {
-  arr = arr.map(timesThree);
-  return arr;
-};
+let timesThree = (n) => n * 3;
+let mapTriple = (arr) => arr.map(timesThree);
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
@@ -104,11 +89,8 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (n1, n2) => { return n1 + n2; };
-let reduceSum = (arr) => {
-  let total = arr.reduce(add);
-  return total;
-};
+let add = (n1, n2) => n1 + n2;
+let reduceSum = (arr) => arr.reduce(add);
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
 
@@ -119,7 +101,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (n1, n2) => { return n1 * n2; };
-let reduceProduct = (arr) => { return arr.reduce(multiply); };
+let multiply = (n1, n2) => n1 * n2;
+let reduceProduct = (arr) => arr.reduce(multiply);
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);

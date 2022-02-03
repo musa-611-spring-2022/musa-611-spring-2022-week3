@@ -24,10 +24,7 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = (num) => {
-  num += 1;
-  return num;
-};
+let plusOne = (num) => num + 1;
 
 console.log('plusOne success:', plusOne(99) === 100);
 
@@ -36,10 +33,7 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = (num) => {
-  num *= 3;
-  return num;
-};
+let timesThree = (num) => num * 3;
 
 console.log('timesThree success:', timesThree(33) === 99);
 
@@ -84,10 +78,7 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = (objectHere, keyHere) => {
-  let value = objectHere[keyHere];
-  return value;
-};
+let valueAtKey = (objectHere, keyHere) => objectHere[keyHere];
 
 console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }) === 'bar');
 
@@ -98,7 +89,7 @@ Instructions: Write a function that returns true if a number is even.
 let isEven = (num) => {
   if (num % 2 === 0) {
     return true;
-  } else {
+  } {
     return false;
   }
 };
@@ -112,9 +103,7 @@ Instructions: Write a function that returns true if a number is odd.
 let isOdd = (num) => {
   if (num % 2 === 0) {
     return false;
-  } else {
-    return true;
-  }
+  } return true;
 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
