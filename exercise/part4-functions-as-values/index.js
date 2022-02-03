@@ -67,13 +67,14 @@ Instructions: Write a function which takes an array and returns the value of
 ===================== */
 
 let reduce = (arr, func, initial) => {
-  medium = initial
+  let medium = initial
   for (let i=0; i<arr.length; i++){
     step1 = arr[i]
     medium = func(medium, step1)
   }
   return medium;
 };
+
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -87,7 +88,12 @@ Bonus: Create a function called sumSquares that takes an array and returns
 ===================== */
 
 let sumSquares = (arr) => {
-
+  let totalSum = 0
+  for (const e of arr){
+    product = multiply(e,e)
+    totalSum = totalSum + product
+  }
+  return totalSum;
 };
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
