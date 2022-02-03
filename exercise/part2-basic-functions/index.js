@@ -80,7 +80,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (objectHere, keyHere) => objectHere[keyHere];
 
-console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }) === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }) === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
@@ -89,10 +89,8 @@ Instructions: Write a function that returns true if a number is even.
 let isEven = (num) => {
   if (num % 2 === 0) {
     return true;
-  } {
-    return false;
-  }
-};
+  } return false;
+  };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
