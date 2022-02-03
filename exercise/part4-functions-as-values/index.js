@@ -17,11 +17,11 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {
-  finalArray = []
-  for (let i = 0; i < arr.length; i++){
-    step = pred(arr[i])
-    if (step === true){
-      finalArray.push(arr[i])
+  let finalArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    let step = pred(arr[i]);
+    if (step === true) {
+      finalArray.push(arr[i]);
     }
   }
   return finalArray;
@@ -36,10 +36,10 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  finalArray = []
-  for (let i = 0; i < arr.length; i++){
-    finalArray.push(func(arr[i]))
-    }
+  let finalArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    finalArray.push(func(arr[i]));
+  }
   return finalArray;
 };
 
@@ -67,10 +67,10 @@ Instructions: Write a function which takes an array and returns the value of
 ===================== */
 
 let reduce = (arr, func, initial) => {
-  let medium = initial
-  for (let i=0; i<arr.length; i++){
-    step1 = arr[i]
-    medium = func(medium, step1)
+  let medium = initial;
+  for (let i = 0; i < arr.length; i++) {
+    let step1 = arr[i];
+    medium = func(medium, step1);
   }
   return medium;
 };
@@ -88,10 +88,10 @@ Bonus: Create a function called sumSquares that takes an array and returns
 ===================== */
 
 let sumSquares = (arr) => {
-  let totalSum = 0
-  for (const e of arr){
-    product = multiply(e,e)
-    totalSum = totalSum + product
+  let totalSum = 0;
+  for (const e of arr) {
+    let product = multiply(e, e);
+    totalSum += product;
   }
   return totalSum;
 };

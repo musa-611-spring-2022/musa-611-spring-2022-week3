@@ -83,10 +83,10 @@ high schools (hint: another attribute besides TYPE will be useful...).
 
 let publicHighSchools = [];
 schools.forEach((school) => {
-  if (school.TYPE === "1" && school.GRADE_LEVEL.includes('HIGH')) {
+  if (school.TYPE === '1' && school.GRADE_LEVEL.includes('HIGH')) {
     publicHighSchools.push(school);
   }
-})
+});
 
 /* =====================
 Step 3: Display the data
@@ -98,6 +98,6 @@ function addPlace(lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-publicHighSchools.forEach((school)=>{
+publicHighSchools.forEach((school) => {
   addPlace(school.Y, school.X, school.SCHOOL_NAME);
-})
+});
