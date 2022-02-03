@@ -12,8 +12,11 @@ Functions that `return` can be passed as values to other functions. Each exercis
 Instructions: Write a function which counts the number of times a value occurs in an array
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
+var arr = [1, 2, 3, 4, 5, 4, 4];
 
-let countItem = (arr, item) => {};
+let countItem = (arr, item) => {
+  return arr.filter((v) => (v === item)).length;
+}
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
@@ -24,7 +27,12 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (n) => {};
+let isEven = (n) => {
+  if(num % 2 == 0)
+              return true;
+          return false;
+      };
+};
 let filterEven = (arr) => {};
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
