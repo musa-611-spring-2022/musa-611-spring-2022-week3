@@ -10,7 +10,10 @@ describe('The filter function', () => {
       let callArgs = [];
 
       let originalFunc = Array.prototype.filter;
-      let patchedFunc = (...args) => { callArgs.push(args); return originalFunc.apply(this, args); };
+      let patchedFunc = (...args) => {
+        callArgs.push(args);
+        return originalFunc.apply(this, args);
+      };
 
       try {
         Array.prototype.filter = patchedFunc;
