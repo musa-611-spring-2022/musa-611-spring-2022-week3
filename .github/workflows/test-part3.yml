@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest exercise/part3-iterators/ --color=true
+        npx jest __tests__/test_part3.js --color=true
