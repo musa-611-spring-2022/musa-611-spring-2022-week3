@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array with
 
 let isEven = (n) => (n % 2 === 0);
 
-let filterEven = (arr) => { return arr.filter((arg) => isEven(arg)); };
+let filterEven = (arr) => arr.filter((arg) => isEven(arg));
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -72,7 +72,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let timesThree = (n) => n * 3;
-let mapTriple = (arr) => arr.map(arg => timesThree(arg));
+let mapTriple = (arr) => arr.map((arg) => timesThree(arg));
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 

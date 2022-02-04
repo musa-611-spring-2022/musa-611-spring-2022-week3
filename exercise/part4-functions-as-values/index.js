@@ -19,8 +19,8 @@ Instructions: Write a function which takes an array and returns a new array,
 let filter = (arr, pred) => {
   let tempArray = [];
   arr.forEach((arg) => {
-      if(pred(arg)){tempArray.push(arg);}
-    });
+    if (pred(arg)) { tempArray.push(arg); }
+  });
   return tempArray;
 };
 
@@ -37,7 +37,7 @@ let map = (arr, func) => {
   arr.forEach((arg) => {
     let tempItem = func(arg);
     tempArray.push(tempItem);
-    });
+  });
   return tempArray;
 };
 
@@ -64,19 +64,15 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { 
+let reduce = (arr, func, initial) => {
   let returnVal;
   let firstVal = func(arr[0], arr[1]);
-  for(i=2; i < arr.length; i++){
+  for (let i = 2; i < arr.length; i++) {
     firstVal = func(firstVal, arr[i]);
     let finalVal = func(firstVal, initial);
     returnVal = finalVal;
   }
   return returnVal;
-  /*arr.forEach((arg)=>{
-    let tempVal = func(arg, _(next(arg)));
-    console.log(tempVal)
-  })*/
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
@@ -90,6 +86,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => reduce(map(arr, arg => multiply(arg, arg)), add, 0);
+let sumSquares = (arr) => reduce(map(arr, (arg) => multiply(arg, arg)), add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);

@@ -90,7 +90,7 @@ publicHighSchools[grade] = grade;
 ===================== */
 
 
-let publicHighSchools= [];
+let publicHighSchools = [];
 
 schools.forEach((school) => {
   const subtype = school.TYPE_SPECIFIC;
@@ -100,24 +100,21 @@ schools.forEach((school) => {
   const lon = school.X;
   let schoolName = {};
 
-  if (grade.includes("HIGH") && subtype.includes("DISTRICT")){
+  if (grade.includes('HIGH') && subtype.includes('DISTRICT')) {
     schoolName.grade = grade;
     schoolName.lat = lat;
     schoolName.lon = lon;
     schoolName.subtype = subtype;
     schoolName.name = name;
-    publicHighSchools.push(schoolName); 
+    publicHighSchools.push(schoolName);
   }
-
-  
 });
 
-/* =====================
+ /* =====================
 Step 3: Display the data
-console.log(`school: ${publicHighSchools.schoolName.name}, grade: ${publicHighSchools.schoolName.grade}`);
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
-=====================*/ 
+=====================*/
 const myAPIKey = '818d279906d64c3290305f5265c208e1';
 const markerIcon = L.icon({
   iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=%236b2e7a&size=small&icon=school&iconType=material&strokeColor=%2316001c&shadowColor=%232b0e0e&scaleFactor=2&apiKey=${myAPIKey}`,
@@ -126,11 +123,11 @@ const markerIcon = L.icon({
 });
 
 const addPlace = (lat, lon, schoolname) => {
-  L.marker([lat, lon], {icon: markerIcon}).bindTooltip(schoolname).addTo(map);
+  L.marker([lat, lon], { icon: markerIcon }).bindTooltip(schoolname).addTo(map);
 };
 
-Object.values(publicHighSchools).forEach(schoolName => {
-  addPlace(lat=schoolName.lat, lon=schoolName.lon, schoolname=schoolName.name);
+Object.values(publicHighSchools).forEach((schoolName) => {
+  addPlace(schoolName.lat, schoolName.lon, schoolName.name);
 });
 
 
