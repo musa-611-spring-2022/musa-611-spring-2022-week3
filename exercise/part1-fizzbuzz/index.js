@@ -25,7 +25,7 @@ Start code
 
 ===================== */
 for (let i = 1; i < 101; i++) {
-  switch (true){
+  switch (true) {
     case (i % 15) === 0:
       console.log('FizzBuzz');
       break;
@@ -36,8 +36,8 @@ for (let i = 1; i < 101; i++) {
       console.log('Fizz');
       break;
     default:
-      console.log(i);    
-    }
+      console.log(i);
+  }
 }
 
 
