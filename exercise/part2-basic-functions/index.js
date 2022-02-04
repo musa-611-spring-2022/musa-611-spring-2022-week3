@@ -14,7 +14,7 @@ Example: "age(2000) should return 22"
 let curYear = new Date().getFullYear();
 
 let age = (birthYear) => {
-    return(curYear - birthYear);
+    return curYear - birthYear;
 };
 
 console.log('age success:', age(1971) === 51);
@@ -25,7 +25,7 @@ Example: "plusOne(2) should return 3"
 ===================== */
 
 let plusOne = (i) => {
-    return(i + 1);
+    return i + 1;
 };
 
 console.log('plusOne success:', plusOne(99) === 100);
@@ -36,7 +36,7 @@ Example: "timesThree(2) should return 6"
 ===================== */
 
 let timesThree = (i) => {
-    return(i * 3);
+    return i * 3;
 };
 
 console.log('timesThree success:', timesThree(33) === 99);
@@ -47,7 +47,7 @@ Example: "add(2, 3) should return 5"
 ===================== */
 
 let add = (i, j) => {
-    return(i + j);
+    return i + j;
 };
 
 console.log('add success:', add(4, 6) === 10);
@@ -58,7 +58,7 @@ Example: "multiply(2, 3) should return 6"
 ===================== */
 
 let multiply = (i, j) => {
-    return(i * j);
+    return i * j;
 };
 
 console.log('multiply success:', multiply(4, 6) === 24);
@@ -68,7 +68,9 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = () => {};
+let valueAtIndex = (ar, idx) => {
+    return ar[idx];
+};
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -77,7 +79,9 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = () => {};
+let valueAtKey = (obj, key) => {
+    return obj[key];
+};
 
 console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
 
@@ -85,7 +89,7 @@ console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = () => {};
+let isEven = (i) => i % 2 === 0;
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
@@ -93,6 +97,6 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
-let isOdd = () => {};
+let isOdd = (i) => i % 2 === 1;
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
