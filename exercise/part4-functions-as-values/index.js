@@ -17,7 +17,11 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {
-  return arr.filter(pred);
+  let tempArray = [];
+  arr.forEach((arg) => {
+      if(pred(arg)){tempArray.push(arg);}
+    });
+  return tempArray;
 };
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
@@ -29,7 +33,12 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  return arr.map(func);
+  let tempArray = [];
+  arr.forEach((arg) => {
+    let tempItem = func(arg);
+    tempArray.push(tempItem);
+    });
+  return tempArray;
 };
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -55,7 +64,20 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
+let reduce = (arr, func, initial) => { 
+  let returnVal;
+  let firstVal = func(arr[0], arr[1]);
+  for(i=2; i < arr.length; i++){
+    firstVal = func(firstVal, arr[i]);
+    let finalVal = func(firstVal, initial);
+    returnVal = finalVal;
+  }
+  return returnVal;
+  /*arr.forEach((arg)=>{
+    let tempVal = func(arg, _(next(arg)));
+    console.log(tempVal)
+  })*/
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);

@@ -90,8 +90,7 @@ publicHighSchools[grade] = grade;
 ===================== */
 
 
-let publicHighSchools= { };
-let schoolArray = [];
+let publicHighSchools= [];
 
 schools.forEach((school) => {
   const subtype = school.TYPE_SPECIFIC;
@@ -107,10 +106,9 @@ schools.forEach((school) => {
     schoolName.lon = lon;
     schoolName.subtype = subtype;
     schoolName.name = name;
-    schoolArray.push(schoolName)
-
+    publicHighSchools.push(schoolName); 
   }
-  publicHighSchools = schoolArray;
+
   
 });
 
