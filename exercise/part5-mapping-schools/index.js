@@ -81,7 +81,14 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = [];
+schools.forEach((school) => {
+  if (school.TYPE_SPECIFIC === 'DISTRICT' || school.TYPE_SPECIFIC === 'CONTRACTED') {
+    if (school.GRADE_LEVEL === 'HIGH SCHOOL' || school.GRADE_LEVEL === 'MIDDLE/HIGH' || school.GRADE_LEVEL === 'ELEMENTARY/MIDDLE/HIGH') {
+      publicHighSchools.push(school);
+    }
+  }
+});
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +96,7 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+publicHighSchools.forEach((school) => {
+  L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
+});
