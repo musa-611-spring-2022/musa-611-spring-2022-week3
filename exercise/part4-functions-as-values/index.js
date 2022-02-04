@@ -69,10 +69,9 @@ Instructions: Write a function which takes an array and returns the value of
 let reduce = (arr, func, initial) => {
   medium = initial
   for (let i=0; i<arr.length; i++){
-    step1 = arr[i]
-    medium = func(medium, step1)
+    initial = func(initial, arr[i]);
   }
-  return medium;
+  return initial;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
@@ -86,10 +85,7 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-/*
-let sumSquares = (arr) => {
 
-};
+let sumSquares = (arr) => arr.map((arrs) => timesThree(arrs)).reduce(add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
-/*
