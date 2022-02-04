@@ -27,9 +27,8 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isEven = (n) => {n % 2 === 0};
-let filterEven = (arr) => {
-  return arr.filter(isEven);
-};
+let filterEven = (arr) => arr.filter(isEven);
+
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -40,9 +39,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (n) => {n % 2 === 1};
-let filterOdd = (arr) => {
-  return arr.filter(isOdd);
-};
+let filterOdd = (arr) => arr.filter(isOdd);
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
 
