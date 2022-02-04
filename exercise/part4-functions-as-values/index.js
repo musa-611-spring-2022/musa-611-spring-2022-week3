@@ -90,8 +90,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {
-  return reduce(map(arr, arg => multiply(arg, arg)), add, 0);
-};
+let sumSquares = (arr) => reduce(map(arr, arg => multiply(arg, arg)), add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
