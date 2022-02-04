@@ -86,8 +86,10 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
+/*
 let sumSquares = (arr) => {
 
 };
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
+/*
