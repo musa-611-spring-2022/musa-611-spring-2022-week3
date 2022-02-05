@@ -91,18 +91,18 @@ let isEven = (num) => {
   if(num % 2 == 0)
               return true;
           return false;
-      };
+};
+
+
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
 /* =====================
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
-
 let isOdd = (num) => {
   if(num % 2 == 0)
               return false;
           return true;
 
 };
-
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
