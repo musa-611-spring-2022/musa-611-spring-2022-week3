@@ -81,7 +81,13 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let targetSchoolType = 'DISTRICT';
+let targetGrade = 'HIGH';
+let targetTypeKey = Object.keys(schoolTypeDict).find(key => schoolTypeDict[key].indexOf(targetSchoolType) !== -1);
+
+let publicHighSchools = _.filter(schools, (school) => {
+  return school.TYPE === targetTypeKey && school.GRADELEVEL.indexOf(targetGrade) !== -1
+});
 
 /* =====================
 Step 3: Display the data
