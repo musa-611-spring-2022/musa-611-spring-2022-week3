@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest exercise/part4-functions-as-values/ --color=true
+        npx jest __tests__/test_part4.js --color=true
