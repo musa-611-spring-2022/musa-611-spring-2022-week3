@@ -37,7 +37,7 @@ Instructions: Write a function which takes an array and returns a new array,
 let map = (arr, func) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++){
-    newArr.push(func(i));
+    newArr.push(func(arr[i]));
   }
   return newArr
 };
@@ -88,7 +88,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
 
 let sumSquares = (arr) => {
     return reduce(map(arr, (x) => x*x),add,0);
-}
-;
+};
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
