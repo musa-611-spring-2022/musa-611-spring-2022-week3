@@ -86,7 +86,7 @@ let targetGrade = 'HIGH';
 let targetTypeKey = Object.keys(schoolTypeDict).find(key => schoolTypeDict[key].indexOf(targetSchoolType) !== -1);
 
 let publicHighSchools = _.filter(schools, (school) => {
-  return school.TYPE === targetTypeKey && school.GRADELEVEL.indexOf(targetGrade) !== -1
+  return school.TYPE === targetTypeKey && school['GRADE_LEVEL'].indexOf(targetGrade) !== -1;
 });
 
 /* =====================
@@ -95,3 +95,9 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+const addSchool = (school) => {
+  L.marker([school.Y, school.X]).bindTooltip(school['SCHOOL_NAME_LABEL']).addTo(map);
+};
+
+_.each(publicHighSchools, addSchool);
