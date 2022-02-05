@@ -64,15 +64,14 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
+
 let reduce = (arr, func, initial) => {
-  let returnVal;
-  let firstVal = func(arr[0], arr[1]);
-  for (let i = 2; i < arr.length; i++) {
-    firstVal = func(firstVal, arr[i]);
-    let finalVal = func(firstVal, initial);
-    returnVal = finalVal;
+  let result = initial;
+  for (const item of arr) {
+    result = func(result, item);
+    console.log(result);
   }
-  return returnVal;
+  return result;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);

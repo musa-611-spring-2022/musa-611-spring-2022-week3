@@ -100,7 +100,7 @@ schools.forEach((school) => {
   const lon = school.X;
   let schoolName = {};
 
-  if (grade.includes('HIGH') && subtype.includes('DISTRICT')) {
+  if (grade.includes('HIGH') && (subtype.includes('DISTRICT') || subtype.includes('CONTRACTED'))) {
     schoolName.grade = grade;
     schoolName.lat = lat;
     schoolName.lon = lon;
@@ -110,11 +110,11 @@ schools.forEach((school) => {
   }
 });
 
- /* =====================
+/* =====================
 Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
-=====================*/
+===================== */
 const myAPIKey = '818d279906d64c3290305f5265c208e1';
 const markerIcon = L.icon({
   iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=%236b2e7a&size=small&icon=school&iconType=material&strokeColor=%2316001c&shadowColor=%232b0e0e&scaleFactor=2&apiKey=${myAPIKey}`,
