@@ -16,7 +16,7 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => {};
+let filter = (arr, pred) => { return arr.filter(pred)};
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));
@@ -26,7 +26,7 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => {};
+let map = (arr, func) => { return arr.map(func)};
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
