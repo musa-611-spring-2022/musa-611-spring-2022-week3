@@ -26,7 +26,7 @@ Start code
 ===================== */
 
 
-for (let num = 0; num <= 100; num++){
+for (let num = 1; num <= 100; num++){
   if ((0 == num % 3) && (0 == num % 5)){
   console.log ("FizzBuzz");
          } else if (0 == num % 5) {
