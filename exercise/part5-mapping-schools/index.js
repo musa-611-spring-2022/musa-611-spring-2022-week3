@@ -79,13 +79,55 @@ Step 2: Prepare the data
 Create a new variable "publicHighSchools" that only contains data for the public
 high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
+
+
+if (grade.includes("HIGH")){
+  publicHighSchools.push(grade)
+}
+publicHighSchools[grade] = grade;
+
+
 ===================== */
 
-let publicHighSchools;
+
+let publicHighSchools = [];
+
+schools.forEach((school) => {
+  const subtype = school.TYPE_SPECIFIC;
+  const name = school.SCHOOL_NAME_LABEL;
+  const grade = school.GRADE_LEVEL;
+  const lat = school.Y;
+  const lon = school.X;
+  let schoolName = {};
+
+  if (grade.includes('HIGH') && (subtype.includes('DISTRICT') || subtype.includes('CONTRACTED'))) {
+    schoolName.grade = grade;
+    schoolName.lat = lat;
+    schoolName.lon = lon;
+    schoolName.subtype = subtype;
+    schoolName.name = name;
+    publicHighSchools.push(schoolName);
+  }
+});
 
 /* =====================
 Step 3: Display the data
-
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+const myAPIKey = '818d279906d64c3290305f5265c208e1';
+const markerIcon = L.icon({
+  iconUrl: `https://api.geoapify.com/v1/icon/?type=awesome&color=%236b2e7a&size=small&icon=school&iconType=material&strokeColor=%2316001c&shadowColor=%232b0e0e&scaleFactor=2&apiKey=${myAPIKey}`,
+  iconSize: [31, 46], // size of the icon
+  iconAnchor: [15.5, 42], // point of the icon which will correspond to marker's location
+});
+
+const addPlace = (lat, lon, schoolname) => {
+  L.marker([lat, lon], { icon: markerIcon }).bindTooltip(schoolname).addTo(map);
+};
+
+Object.values(publicHighSchools).forEach((schoolName) => {
+  addPlace(schoolName.lat, schoolName.lon, schoolName.name);
+});
+
+
