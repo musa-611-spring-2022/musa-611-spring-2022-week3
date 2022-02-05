@@ -26,7 +26,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (n) => {n % 2 === 0};
+let isEven = (n) => n % 2 === 0;
 let filterEven = (arr) => arr.filter(isEven);
 
 
@@ -38,7 +38,7 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 
-let isOdd = (n) => {n % 2 === 1};
+let isOdd = (n) => n % 2 === 1;
 let filterOdd = (arr) => arr.filter(isOdd);
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
