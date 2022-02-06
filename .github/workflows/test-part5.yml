@@ -1,4 +1,4 @@
-name: Testing Basic Functions exercise
+name: Testing School Data Mapping exercise
 
 on:
   pull_request:
@@ -21,4 +21,4 @@ jobs:
     - name: Run jest
       run: |
         npx http-server --silent --port 8000 &
-        npx jest __tests__/test_part2.js --color=true
+        npx jest __tests__/test_part5.js --color=true
