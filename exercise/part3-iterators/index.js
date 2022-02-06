@@ -14,10 +14,10 @@ Instructions: Write a function which counts the number of times a value occurs i
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 let countItem = (arr, item) => {
-  count = 0;
-  arr.forEach((i) => {
+  let count = 0;
+  arr.forEach ((i) => {
     if (i === item){
-      count ++;
+      count++;
     }
     });
   return count;
