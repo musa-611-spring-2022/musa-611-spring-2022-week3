@@ -40,7 +40,7 @@ correlates each school TYPE to an array of TYPE_SPECIFIC values:
 */
 
 const schoolTypeDict = {
-  TYPE_SPECIFIC:
+  TYPE : TYPE_SPECIFIC,
 };
 
 schools.forEach((school) => {
