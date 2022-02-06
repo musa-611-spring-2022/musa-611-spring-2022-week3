@@ -11,7 +11,8 @@ in years. (Let's just assume this person was born January 1 at 12:01 AM)
 Example: "age(2000) should return 22"
 ===================== */
 
-let age = (birthYear) => {
+let age = (birthYear) =>
+{
   return 2022 - birthYear
 };
 
