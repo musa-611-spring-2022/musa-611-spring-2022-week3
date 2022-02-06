@@ -81,13 +81,13 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let targetSchoolType = 'DISTRICT';
+let targetType = 'DISTRICT';
 let targetGrade = 'HIGH';
-let targetTypeKey = Object.keys(schoolTypeDict).find(key => schoolTypeDict[key].indexOf(targetSchoolType) !== -1);
+const isTargetType = (arr) => _.indexOf(arr, targetType) > -1;
+let targetTypeKey = _.findKey(schoolTypeDict, isTargetType);
+const isPublicHS = (s) => s.TYPE === targetTypeKey && s.GRADE_LEVEL.indexOf(targetGrade) > -1;
+let publicHighSchools = _.filter(schools, isPublicHS);
 
-let publicHighSchools = _.filter(schools, (school) => {
-  return school.TYPE === targetTypeKey && school['GRADE_LEVEL'].indexOf(targetGrade) !== -1;
-});
 
 /* =====================
 Step 3: Display the data
@@ -97,7 +97,7 @@ Add a tooltip to each marker that contains the name of the school.
 ===================== */
 
 const addSchool = (school) => {
-  L.marker([school.Y, school.X]).bindTooltip(school['SCHOOL_NAME_LABEL']).addTo(map);
+  L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME_LABEL).addTo(map);
 };
 
 _.each(publicHighSchools, addSchool);
