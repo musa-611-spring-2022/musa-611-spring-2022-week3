@@ -78,15 +78,12 @@ console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = (num) => {
-  return num % 2 === 0;
-};
+let isEven = (num) => num % 2 === 0;
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
 /* =====================
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
-let isOdd = (num) => {
-  return num % 2 != 0;
-};
+let isOdd = (num) => num % 2 !== 0;
+
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
