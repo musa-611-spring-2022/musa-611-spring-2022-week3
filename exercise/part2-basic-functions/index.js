@@ -49,7 +49,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (a,b) => a * b;
+let multiply = (a, b) => a * b;
 
 
 console.log('multiply success:', multiply(4, 6) === 24);
@@ -72,16 +72,16 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 let valueAtKey = (myObject, key) => myObject[key];
 
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
 let isEven = (num) => {
-  if(num % 2 == 0)
-              return true;
-          return false;
+  if (num % 2 === 0)
+    return true
+  return false;
 };
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
@@ -89,9 +89,8 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 let isOdd = (num) => {
-  if(num % 2 == 0)
-              return false;
-          return true;
-
+  if (num % 2 === 0)
+    return false
+  return true;
 };
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
