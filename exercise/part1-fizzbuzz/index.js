@@ -25,18 +25,17 @@ Start code
 
 ===================== */
 
-
 for (let num = 1; num <= 100; num++) {
-  if ((0 === num % 3) && (0 === num % 5)) {
+  if ((num % 3 === 0) && (num % 5 === 0)) {
        console.log ("FizzBuzz");
-} else if (0 === num % 5) {
+} else if (num % 5 === 0) {
           console.log("Buzz");
-        } else if (0 === num % 3){
+        } else if (num % 3 === 0){
            console.log("Fizz");
          } else {
            console.log (num);
          }
-      }
+}
 
 
 /* =====================
