@@ -39,7 +39,9 @@ First, we're going to create a dictionary (using a JavaScript object) that
 correlates each school TYPE to an array of TYPE_SPECIFIC values:
 */
 
-const schoolTypeDict = {};
+const schoolTypeDict = {
+  TYPE_SPECIFIC:
+};
 
 schools.forEach((school) => {
   const type = school.TYPE;
