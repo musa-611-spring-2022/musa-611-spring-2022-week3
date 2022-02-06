@@ -17,7 +17,13 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {
-  return arr.filter(n => pred(n))
+  var result=[]
+  for (var i=0; i<arr.length; i++) {
+    if (pred(arr[i])){
+      result.push(arr[i])
+    };
+  };
+  return result
 };
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
@@ -29,7 +35,11 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  return arr.map(n => func(n))
+  var result=[];
+  for (var i=0; i<arr.length; i++) {
+    result.push(func(arr[i]))
+  };
+  return result
 };
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -56,7 +66,11 @@ Instructions: Write a function which takes an array and returns the value of
 ===================== */
 
 let reduce = (arr, func, initial) => {
-  return arr.reduce(func, initial)
+  result = initial
+  for (var i=0; i<arr.length; i++){
+    result = func(result, arr[i])
+  };
+  return result
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
