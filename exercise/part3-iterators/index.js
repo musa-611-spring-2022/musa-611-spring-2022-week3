@@ -48,7 +48,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (n) => {
-  if(n % 2 == 0)
+  if(n % 2 === 0)
               return false;
           return true;
 
