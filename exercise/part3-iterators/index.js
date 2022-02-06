@@ -58,6 +58,7 @@ Instructions: Write a function which takes an array and returns a new array with
 
 let timesThree = (n) => n * 3;
 let mapTriple = (arr) => arr.map(timesThree);
+
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
 /* =====================
