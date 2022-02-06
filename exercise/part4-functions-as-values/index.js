@@ -66,7 +66,15 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
+let reduce = (arr, func, initial) => {
+// { return arr.reduce(func, initial)
+  let oldVal = initial; // Will only see initial value once, assign it to old value so it can be used in the iterations
+  for (i = 0; i < arr.length; i++) {
+    let newVal = arr[i]; // Pull the 'next' value from the array
+    oldVal = func(oldVal, newVal) // Apply the reducing function on the old value and the new value     
+  }
+  return oldVal;
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -79,6 +87,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {};
+let sumSquares = (arr) => arr.map((i) => multiply(i,i)).reduce(add);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
