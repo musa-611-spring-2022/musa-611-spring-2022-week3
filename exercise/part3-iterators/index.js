@@ -5,7 +5,7 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. 
+Functions that `return` can be passed as values to other functions.
 Each exercise here builds on that theme.
 ===================== */
 
@@ -15,9 +15,10 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
 let countItem = (arr, item) => {
-  let filteredResult = arr.filter(i => i === item);
-  return filteredResult.length;
-}
+  let count = 0;
+  arr.forEach((v) => (v === item && count++));
+  return count;
+};
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
