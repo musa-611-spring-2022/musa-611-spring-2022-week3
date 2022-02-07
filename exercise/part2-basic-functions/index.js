@@ -2,7 +2,7 @@
 # Exercise: Basic Functions
 
 Let's get a little more practice writing functions (we'll be using some of these
-functions later on too ;-).
+functions later on too;-).
 ===================== */
 
 /* =====================
@@ -11,7 +11,7 @@ in years. (Let's just assume this person was born January 1 at 12:01 AM)
 Example: "age(2000) should return 22"
 ===================== */
 
-let age = (birthYear) => {return 2022 - birthYear; };
+let age = (birthYear) => { return 2022 - birthYear;};
 
 console.log('age success:', age(1971) === 51);
 
@@ -20,7 +20,7 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = (original_num) =>  {return original_num + 1 ; };
+let plusOne = (originalnum) => { return originalnum + 1; };
 
 console.log('plusOne success:', plusOne(99) === 100);
 
@@ -29,7 +29,7 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = (original_num) => {return original_num * 3; };
+let timesThree = (originalnum) => { return originalnum * 3; };
 
 console.log('timesThree success:', timesThree(33) === 99);
 
@@ -38,7 +38,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (first, second) => {return first + second ; };
+let add = (first, second) => { return first + second; };
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -47,7 +47,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (first, second) => { return first * second ; };
+let multiply = (first, second) => { return first * second; };
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
