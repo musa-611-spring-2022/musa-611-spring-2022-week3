@@ -18,8 +18,8 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let filter = (arr, pred) => {
   let newArray = [];
-  for (let i = 0; i < arr.length; i++){
-    if (pred(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (pred(arr[i])) {
       newArray.push(arr[i]);
     }
   }
@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let map = (arr, func) => {
   let newArray = [];
-  for (let i = 0; i <arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     let val = func(arr[i]);
     newArray.push(val);
   }
@@ -69,7 +69,7 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
   let newArray = initial;
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     newArray = func(newArray, arr[i]);
   }
   return newArray;
