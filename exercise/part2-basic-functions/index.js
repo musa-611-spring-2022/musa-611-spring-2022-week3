@@ -38,7 +38,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (n,i) => n + i;
+let add = (n, i) => n + i;
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -47,7 +47,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (n , i) => n * i;
+let multiply = (n, i) => n * i;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
@@ -56,7 +56,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = (i , n) => i[n];
+let valueAtIndex = (i, n) => i[n];
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -65,16 +65,16 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = (i , n) => i[n];
+let valueAtKey = (i, n) => i[n];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
 let isEven = (n) => {
-  if (n % 2 == 0) {
+  if (n % 2 === 0) {
     return true;
   }
   return false;
@@ -87,7 +87,7 @@ Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
 let isOdd = (n) => {
-  if (n % 2 == 0){
+  if (n % 2 === 0) {
     return false;
   }
   return true;
