@@ -56,7 +56,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = (arr, search) => { arr[search] };
+let valueAtIndex = (arr, search) => { return arr[search] };
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -65,7 +65,7 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = () => {};
+let valueAtKey = (arr, search) => { return arr[search] };
 
 console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
 
@@ -73,7 +73,7 @@ console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = () => {};
+let isEven = (num) => { return num % 2 == 0 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
@@ -81,6 +81,6 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
-let isOdd = () => {};
+let isOdd = (num) => { return num % 2 != 0 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
