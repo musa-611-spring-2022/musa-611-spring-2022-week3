@@ -78,7 +78,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
 let valueAtKey = (object, key) => {
-  return object.key;
+  return object[key];
 };
 
 console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
