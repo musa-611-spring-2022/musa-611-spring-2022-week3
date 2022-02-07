@@ -76,10 +76,7 @@ Instructions: Write a function that returns true if a number is even.
 let isEven = (x) => {
   if (x % 2 === 0){
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
@@ -91,10 +88,7 @@ Instructions: Write a function that returns true if a number is odd.
 let isOdd = (x) => {
   if (x % 2 === 1){
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);

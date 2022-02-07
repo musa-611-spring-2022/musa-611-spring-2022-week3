@@ -5,7 +5,7 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions. Each exercise here
 ===================== */
 
 /* =====================
@@ -14,8 +14,8 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
 let countItem = (arr, item) => {
-  sum = 0;
-  arr.forEach((x) =>(x === item && sum++));
+  let sum = 0;
+  arr.forEach((x) => (x === item && sum++));
   return sum;
 };
 
@@ -28,16 +28,12 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 let isEven = (x) => {
-  if (x % 2 === 0){
+  if (x % 2 === 0) {
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 };
 
-let filterEven = (arr) =>
-  arr.filter(isEven);
+let filterEven = (arr) => arr.filter(isEven);
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -47,13 +43,11 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 let isOdd = (x) => {
-  if (x % 2 === 1){
+  if (x % 2 === 1) {
     return true;
-  }
-  else {
-    return false;
-  }
+  } return false;
 };
+
 let filterOdd = (arr) => arr.filter(isOdd);
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
