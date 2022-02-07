@@ -5,7 +5,7 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. 
+Functions that `return` can be passed as values to other functions.
 Each exercise here builds on that theme.
 ===================== */
 
@@ -103,7 +103,7 @@ let mapTriple = (arr) => {
   return result;
 };
 
-console.log('mapTriple success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
+console.log('mapTriple success:', mapTriple([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
@@ -117,7 +117,7 @@ let add = (num1, num2) => num1 + num2;
 let reduceSum = (arr) => {
   let sum = 0;
   for (const i of arr) {
-    sum = add(sum, i)
+    sum = add(sum, i);
   }
   return sum;
 };

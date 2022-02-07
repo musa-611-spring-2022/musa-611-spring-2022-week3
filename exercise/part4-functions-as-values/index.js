@@ -20,7 +20,7 @@ let filter = (arr, pred) => {
   let result = [];
   for (const i of arr) {
     if (pred(i)) {
-      result.push(i)
+      result.push(i);
     }
   }
   return result;
@@ -68,7 +68,7 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
   for (const item of arr) {
-    initial = func(initial, item);
+    let initial = func(initial, item);
   }
   return initial;
 };
@@ -84,6 +84,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => reduce(arr.map((x) => multiply(x, x)),add ,0)
+let sumSquares = (arr) => reduce(arr.map((x) => multiply(x, x)), add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
