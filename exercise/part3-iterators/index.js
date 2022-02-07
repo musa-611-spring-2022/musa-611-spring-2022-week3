@@ -129,7 +129,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (n1, n2) = n1 * n2;
+let multiply = (n1, n2) = (n1 * n2);
 
 let reduceProduct = (arr) => {
   let prod = 1;
