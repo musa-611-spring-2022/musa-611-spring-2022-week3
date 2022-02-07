@@ -73,6 +73,8 @@ schoolTypeDict. Which TYPE value represents public schools? (You'll need to know
 this moving forward.)
 ===================== */
 
+/* Jenna's note: TYPE showing up as undefined */
+
 /* =====================
 Step 2: Prepare the data
 
@@ -81,7 +83,15 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+/* Jenna's note: when inspecting TYPE_SPECIFIC, it is "PRIVATE"
+so to create new variable, want TYPE to equal PUBLIC. and GRADE-LEVEL is HIGH */
+
+let publicHighSchools = [];
+
+schools.forEach((school) => {
+  if (school.TYPE === '1' && school.GRADE_LEVEL.includes('HIGH')) { publicHighSchools.push(school); }
+});
+
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +99,12 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+
+for (let i = 0; i < publicHighSchools.length; i++) {
+  let lng = publicHighSchools[i].X;
+  let lat = publicHighSchools[i].Y;
+  let marker = new L.Marker([lat, lng]);
+  marker.bindPopup(publicHighSchools[i].SCHOOL_NAME_LABEL);
+  marker.addTo(map);
+}
