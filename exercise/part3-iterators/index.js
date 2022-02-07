@@ -16,9 +16,9 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 let countItem = (arr, item) => {
   let n = 0
   for (const i of arr) {
-  if (i === item) {
-  n ++;
-  }
+    if (i === item) {
+      n ++;
+    }
   }
   return n;
 };
@@ -39,14 +39,14 @@ let isEven = (number) => {
 let filterEven = (arr) => {
   let result = []
   for (const i of arr) {
-  if (isEven(i)) {
-  result.push(i);
-  }
+    if (isEven(i)) {
+      result.push(i);
+    }
   }
   return result;
 };
 
-console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
+console.log('filterEven success:', filterEven([1, 2, 3, 4, 5, 4, 4]) === [2, 4, 4, 4]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -61,14 +61,14 @@ let isOdd = (number) => {
 let filterOdd = (arr) => {
   let result = []
   for (const i of arr) {
-  if (isOdd(i)) {
-  result.push(i);
-  }
+    if (isOdd(i)) {
+      result.push(i);
+    }
   }
   return result;
 };
 
-console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
+console.log('filterOdd success:', filterOdd([1, 2, 3, 4, 5, 4, 4]) === [1, 3, 5]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -84,12 +84,12 @@ let plusOne = (number) => {
 let mapIncrement = (arr) => {
   let result = []
   for (const i of arr) {
-  result.push(plusOne(i));
+    result.push(plusOne(i));
   }
   return result
 };
 
-console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
+console.log('mapIncrement success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [2, 3, 4, 5, 6, 5, 5]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -105,12 +105,12 @@ let timesThree = (number) => {
 let mapTriple = (arr) => {
   let result = []
   for (const i of arr) {
-  result.push(timesThree(i));
+    result.push(timesThree(i));
   }
   return result;
 };
 
-console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
+console.log('mapTriple success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
@@ -126,7 +126,7 @@ let add = (num1, num2) => {
 let reduceSum = (arr) => {
   let sum = 0
   for (const i of arr) {
-  sum = add(sum, i)
+    sum = add(sum, i)
   }
   return sum;
 };
@@ -147,7 +147,7 @@ let multiply = (num1, num2) => {
 let reduceProduct = (arr) => {
   let production = 1
   for (const i of arr) {
-  production = multiply(production, i)
+    production = multiply(production, i)
   }
   return production
 };
