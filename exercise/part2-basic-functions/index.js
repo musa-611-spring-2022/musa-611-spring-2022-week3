@@ -13,7 +13,7 @@ Example: "age(2000) should return 22"
 
 let curYear = new Date().getFullYear();
 
-let age = (birthYear) => { return curYear - birthYear };
+let age = (birthYear) => curYear - birthYear;
 
 console.log('age success:', age(1971) === 51);
 
@@ -22,7 +22,7 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = (i) => { return i + 1 };
+let plusOne = (i) => i + 1;
 
 console.log('plusOne success:', plusOne(99) === 100);
 
@@ -31,7 +31,7 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = (i) => { return i * 3 };
+let timesThree = (i) => i * 3;
 
 console.log('timesThree success:', timesThree(33) === 99);
 
@@ -40,7 +40,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (i, j) => { return i + j };
+let add = (i, j) => i + j;
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -49,7 +49,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (i, j) => { return i * j };
+let multiply = (i, j) => i * j;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
@@ -58,7 +58,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = (ar, idx) => { return ar[idx] };
+let valueAtIndex = (ar, idx) => ar[idx];
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -67,9 +67,9 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = (obj, key) => { return obj[key] };
+let valueAtKey = (obj, key) => obj[key];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
