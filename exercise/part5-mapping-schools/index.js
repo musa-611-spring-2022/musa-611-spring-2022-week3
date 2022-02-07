@@ -102,7 +102,9 @@ Add a tooltip to each marker that contains the name of the school.
 
 
 for (let i = 0; i < publicHighSchools.length; i++) {
-  let marker = new L.Marker([publicHighSchools[i].X, publicHighSchools[i].Y]);
+  let lng = publicHighSchools[i].X;
+  let lat = publicHighSchools[i].Y;
+  let marker = new L.Marker([lat, lng]);
   marker.bindPopup(publicHighSchools[i].SCHOOL_NAME_LABEL);
   marker.addTo(map);
 }
