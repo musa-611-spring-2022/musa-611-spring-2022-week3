@@ -74,7 +74,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (num) => num + 1;
+let plusOne = (num) => (num + 1);
 
 let mapIncrement = (arr) => {
   let newArr = [];
@@ -93,7 +93,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (num) => num * 3;
+let timesThree = (num) => (num * 3);
 let mapTriple = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
@@ -111,7 +111,7 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (n1, n2) => n1 + n2;
+let add = (n1, n2) => (n1 + n2);
 let reduceSum = (arr) => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -129,7 +129,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (n1, n2) = (n1 * n2);
+let multiply = (n1, n2) => (n1 * n2);
 
 let reduceProduct = (arr) => {
   let prod = 1;

@@ -81,7 +81,7 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools = schools.filter(school => {
+let publicHighSchools = schools.filter((school) => {
   return school.TYPE === '1' && school.GRADE_LEVEL.indexOf('HIGH') !== -1;
 });
 
