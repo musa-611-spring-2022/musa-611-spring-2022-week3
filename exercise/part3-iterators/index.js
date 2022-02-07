@@ -32,9 +32,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (number) => {
-  return number % 2 === 0;
-};
+let isEven = (number) => number % 2 === 0;
 
 let filterEven = (arr) => {
   let result = []
@@ -54,9 +52,7 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 
-let isOdd = (number) => {
-  return number % 2 === 1;
-};
+let isOdd = (number) => number % 2 === 1;
 
 let filterOdd = (arr) => {
   let result = []
@@ -77,9 +73,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (number) => {
-  return number + 1;
-};
+let plusOne = (number) => number + 1;
 
 let mapIncrement = (arr) => {
   let result = []
@@ -98,9 +92,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (number) => {
-  return number * 3;
-};
+let timesThree = (number) => number * 3;
 
 let mapTriple = (arr) => {
   let result = []
@@ -119,9 +111,7 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (num1, num2) => {
-  return num1 + num2;
-};
+let add = (num1, num2) => num1 + num2;
 
 let reduceSum = (arr) => {
   let sum = 0
@@ -140,9 +130,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (num1, num2) => {
-  return num1 * num2;
-};
+let multiply = (num1, num2) => num1 * num2;
 
 let reduceProduct = (arr) => {
   let production = 1

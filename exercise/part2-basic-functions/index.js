@@ -47,9 +47,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (num1, num2) => {
-  return num1 * num2;
-};
+let multiply = (num1, num2) => num1 * num2;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
@@ -69,7 +67,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (object, key) => object[key];
 
-console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
