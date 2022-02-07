@@ -13,7 +13,7 @@ in the index.html file right above the line that loads this index.js script).
 Follow the instructions in the steps below.
 ===================== */
 
-let map = L.map('map', {
+let Gmap = L.map('map', {
   center: [39.9522, -75.1639],
   zoom: 13,
 });
@@ -23,7 +23,7 @@ L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ex
   minZoom: 0,
   maxZoom: 20,
   ext: 'png',
-}).addTo(map);
+}).addTo(Gmap);
 
 
 /* =====================
@@ -73,6 +73,15 @@ schoolTypeDict. Which TYPE value represents public schools? (You'll need to know
 this moving forward.)
 ===================== */
 
+/*
+for (const [key, value] of Object.entries(schools)) {
+  console.log(`${key}: ${value}`);
+}
+*/
+console.log(
+  schools[50]['schoolTypeDict']
+)
+
 /* =====================
 Step 2: Prepare the data
 
@@ -80,8 +89,11 @@ Create a new variable "publicHighSchools" that only contains data for the public
 high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
+let isHS = (school) => {return school.GRADE_LEVEL==='HIGH SCHOOL'};
+let isPublic = (school) => {return school.TYPE==="1"};
 
-let publicHighSchools;
+let publicHighSchools = schools.filter(isHS).filter(isPublic);
+// console.log(publicHighSchools);
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +101,15 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+function addPlace(map, lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+publicHighSchools.forEach((school) => {
+    const lat = school.Y;
+    const lng = school.X;
+    const nme = school.SCHOOL_NAME_LABEL;
+    addPlace(Gmap, lat, lng, nme)
+  }
+)
