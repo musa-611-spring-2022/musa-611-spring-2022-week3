@@ -84,12 +84,12 @@ high schools (hint: another attribute besides TYPE will be useful...).
 let publicHighSchools = [];
 
 schools.forEach((school) => {
-const type = school.TYPE;
-const gradeLvl = school.GRADE_LEVEL;
+  const type = school.TYPE;
+  const gradeLvl = school.GRADE_LEVEL;
 
-if (gradeLvl === "HIGH SCHOOL" && type === '1') {
-  publicHighSchools.push(school);
-}
+  if (gradeLvl === 'HIGH SCHOOL' && type === '1') {
+    publicHighSchools.push(school);
+  }
 });
 /* =====================
 Step 3: Display the data
@@ -99,7 +99,7 @@ Add a tooltip to each marker that contains the name of the school.
 ===================== */
 
 publicHighSchools.forEach((school) => {
-  lng = school.X;
-  lat = school.Y;
+  const lng = school.X;
+  const lat = school.Y;
   L.marker([lat, lng]).bindTooltip(school.SCHOOL_NAME).addTo(map);
 });
