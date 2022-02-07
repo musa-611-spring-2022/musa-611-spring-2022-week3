@@ -16,9 +16,9 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 let countItem = (arr, item) => {
   let n = 0
   for (const i of arr) {
-    if (i === item) {
-      n ++;
-    }
+  if (i === item) {
+  n ++;
+  }
   }
   return n;
 };
@@ -39,9 +39,9 @@ let isEven = (number) => {
 let filterEven = (arr) => {
   let result = []
   for (const i of arr) {
-    if (isEven(i)) {
-      result.push(i);
-    }
+  if (isEven(i)) {
+  result.push(i);
+  }
   }
   return result;
 };
@@ -61,9 +61,9 @@ let isOdd = (number) => {
 let filterOdd = (arr) => {
   let result = []
   for (const i of arr) {
-    if (isOdd(i)) {
-      result.push(i);
-    }
+  if (isOdd(i)) {
+  result.push(i);
+  }
   }
   return result;
 };
@@ -84,7 +84,7 @@ let plusOne = (number) => {
 let mapIncrement = (arr) => {
   let result = []
   for (const i of arr) {
-    result.push(plusOne(i));
+  result.push(plusOne(i));
   }
   return result
 };
@@ -105,7 +105,7 @@ let timesThree = (number) => {
 let mapTriple = (arr) => {
   let result = []
   for (const i of arr) {
-    result.push(timesThree(i));
+  result.push(timesThree(i));
   }
   return result;
 };
@@ -126,7 +126,7 @@ let add = (num1, num2) => {
 let reduceSum = (arr) => {
   let sum = 0
   for (const i of arr) {
-    sum = add(sum, i)
+  sum = add(sum, i)
   }
   return sum;
 };
@@ -147,7 +147,7 @@ let multiply = (num1, num2) => {
 let reduceProduct = (arr) => {
   let production = 1
   for (const i of arr) {
-    production = multiply(production, i)
+  production = multiply(production, i)
   }
   return production
 };
