@@ -90,17 +90,6 @@ Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
 
-const addSchool = (lat, lng, name) => {
-  L.marker([lat, lng]).bindTooltip(name).addTo(map);
-};
-
-publicHighSchools.forEach((school) => addSchool(school.Y, school.X, school.SCHOOL_NAME));
-
-
-/*
-const addSchool = () => {
+publicHighSchools.forEach((school) => {
   L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
-}
-
-publicHighSchools.forEach(school => addSchool);
-*/
+});
