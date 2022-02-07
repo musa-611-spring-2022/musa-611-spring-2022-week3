@@ -51,7 +51,7 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 
-let isOdd = (n) => {
+let isOdd = (num) => {
   return (num%2==1)
 };
 
@@ -72,7 +72,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (n) => {
+let plusOne = (num) => {
   return num+1
 };
 
@@ -94,7 +94,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (n) => {
+let timesThree = (num) => {
   return num*3
 };
 let mapTriple = (arr) => {
