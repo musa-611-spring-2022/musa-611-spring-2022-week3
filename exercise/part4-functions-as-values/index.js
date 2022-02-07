@@ -19,8 +19,10 @@ let filter = (arr, pred) => {
   for (let i= 0; i<arr.length; i++){
     if (pred(arr[i])) {
       updatedArr.push(arr[i]);
-    } return updatedArr;
-  };
+    }
+  }
+  return updatedArr;
+};
 
 console.log('filter success #1:', filter([1, 2, 3, 4, 5, 4, 4], isEven) === [2, 4, 4, 4]);
 console.log('filter success #2:', filter([1, 2, 3, 4, 5, 4, 4], isOdd) === [1, 3, 5]);
@@ -34,7 +36,8 @@ let map = (arr, func) => {
   let updatedArr=[];
   for (let i=0; i<arr.length; i++){
     updatedArr.push(func(arr[i]));
-  } return updatedArr;
+  }
+  return updatedArr;
 };
 
 console.log('map success #1:', map([1, 2, 3, 4, 5, 4, 4], plusOne) === [2, 3, 4, 5, 6, 5, 5]);
