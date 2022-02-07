@@ -18,7 +18,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let filter = (arr, pred) => {
   let resultArr = [];
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (pred(arr[i])) {
       resultArr.push(arr[i]);
     }
@@ -37,7 +37,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let map = (arr, func) => {
   let resultArr = [];
-  for(let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     resultArr.push(func(arr[i]));
   }
   return resultArr;
@@ -68,10 +68,12 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
 // { return arr.reduce(func, initial)
-  let oldVal = initial; // Will only see initial value once, assign it to old value so it can be used in the iterations
-  for (i = 0; i < arr.length; i++) {
+  let oldVal = initial; // Will only see initial value once, 
+  // assign it to old value so it can be used in the iterations
+  for (let i = 0; i < arr.length; i++) {
     let newVal = arr[i]; // Pull the 'next' value from the array
-    oldVal = func(oldVal, newVal) // Apply the reducing function on the old value and the new value     
+    oldVal = func(oldVal, newVal) 
+    // Apply the reducing function on the old value and the new value     
   }
   return oldVal;
 };
@@ -87,7 +89,7 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => arr.map((i) => multiply(i,i)).reduce(add); 
-// For each value of the array map the function of squaring and then adding the previous result
+let sumSquares = (arr) => arr.map((i) => multiply(i, i)).reduce(add);
+// For each value of the array map the squaring function and then add the previous result
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
