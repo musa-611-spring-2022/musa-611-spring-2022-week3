@@ -11,7 +11,7 @@ in years. (Let's just assume this person was born January 1 at 12:01 AM)
 Example: "age(2000) should return 22"
 ===================== */
 
-let age = (birthYear) => return 2022 - birthYear;
+let age = (birthYear) => 2022 - birthYear;
 
 console.log('age success:', age(1971) === 51);
 
