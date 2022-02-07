@@ -67,14 +67,14 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (object, key) => object[key];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
 let isEven = (x) => {
-  if (x % 2 === 0){
+  if (x % 2 === 0) {
     return true;
   } return false;
 };
@@ -86,7 +86,7 @@ Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
 let isOdd = (x) => {
-  if (x % 2 === 1){
+  if (x % 2 === 1) {
     return true;
   } return false;
 };
