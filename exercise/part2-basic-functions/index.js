@@ -56,7 +56,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-let valueAtIndex = (index2) => index2[2];
+let valueAtIndex = (array, index2) => array[index2];
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2));
 
@@ -73,7 +73,7 @@ console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = (number1) => number1 % 2 == 0
+let isEven = (number1) => number1 % 2 === 0
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
@@ -81,6 +81,6 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
-let isOdd = (number2) => number2 % 2 != 0
+let isOdd = (number2) => number2 % 2 !== 0
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);

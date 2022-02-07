@@ -17,11 +17,11 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {
-  newarr = []
-  for (let i = 0; i < arr.length; i++){
-    step = pred(arr[i])
-    if (step === true){
-      newarr.push(arr[i])
+  newarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    step = pred(arr[i]);
+    if (step === true) {
+      newarr.push(arr[i]);
     }
   }
   return newarr;
@@ -36,9 +36,9 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  newarr = []
-  for (let i = 0; i < arr.length; i++){
-    newarr.push(func(arr[i]))
+  newarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newarr.push(func(arr[i]));
     }
   return newarr;
 };
@@ -67,8 +67,8 @@ Instructions: Write a function which takes an array and returns the value of
 ===================== */
 
 let reduce = (arr, func, initial) => {
-  medium = initial
-  for (let i=0; i<arr.length; i++){
+  medium = initial;
+  for (let i = 0; i < arr.length; i++) {
     initial = func(initial, arr[i]);
   }
   return initial;

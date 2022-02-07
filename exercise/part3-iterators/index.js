@@ -14,7 +14,7 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
 let countItem = (arr, item) => {
-  let filteredResult = arr.filter(i => i == item);
+  let filteredResult = arr.filter(i => i === item);
   return filteredResult.length;
 }
 
@@ -28,12 +28,12 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isEven = (n) => {
-  if (n % 2 == 0)
-  return true
-  else return false
+  if (n % 2 === 0)
+  return true;
+  else return false;
 }
 let filterEven = (arr) => {
-  return arr.filter(isEven)
+  return arr.filter(isEven);
 };
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -44,9 +44,9 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (n) => {
-  if (n % 2 != 0)
-  return true
-  else return false
+  if (n % 2 !== 0)
+  return true;
+  else return false;
 }
 let filterOdd = (arr) => {
   return arr.filter(isOdd)
@@ -62,11 +62,11 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let plusOne = (n) => {
-  n ++
+  n ++;
   return n;
 };
 let mapIncrement = (arr) => {
-  return arr.map(plusOne)
+  return arr.map(plusOne);
 };
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -79,11 +79,11 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let timesThree = (n) => {
-  n = n * 3
+  n = n * 3;
   return n;
 };
 let mapTriple = (arr) => {
-  return arr.map(timesThree)
+  return arr.map(timesThree);
 };
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -96,11 +96,11 @@ Instructions: Write a function which takes an array and returns the sum of all
 ===================== */
 
 let add = (n1, n2) => {
-  n = n1 + n2
+  n = n1 + n2;
   return n;
 };
 let reduceSum = (arr) => {
-  return arr.reduce(add)
+  return arr.reduce(add);
 };
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
@@ -113,11 +113,11 @@ Instructions: Write a function which takes an array and returns the product of
 ===================== */
 
 let multiply = (n1, n2) => {
-  n = n1 * n2
-  return n
+  n = n1 * n2;
+  return n;
 };
 let reduceProduct = (arr) => {
-  return arr.reduce(multiply)
+  return arr.reduce(multiply);
 };
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
