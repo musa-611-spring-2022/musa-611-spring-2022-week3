@@ -67,11 +67,11 @@ Instructions: Write a function which takes an array and returns the value of
 ===================== */
 
 let reduce = (arr, func, initial) => {
-  let medium = initial;
+  let newArray = initial;
   for (let i = 0; i < arr.length; i++) {
-    medium = func(initial, arr[i]);
+    newArray = func(newArray, arr[i]);
   }
-  return medium;
+  return newArray;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
