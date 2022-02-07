@@ -20,7 +20,7 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = (n) => return n + 1;
+let plusOne = (n) => n + 1;
 
 console.log('plusOne success:', plusOne(99) === 100);
 
@@ -29,7 +29,7 @@ Instructions: Write a function that multiplies the number provided by three
 Example: "timesThree(2) should return 6"
 ===================== */
 
-let timesThree = (n) => return n * 3;
+let timesThree = (n) => n * 3;
 
 console.log('timesThree success:', timesThree(33) === 99);
 
@@ -38,7 +38,7 @@ Instructions: Write a function that adds two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
-let add = (n,i) => return n + i;
+let add = (n,i) => n + i;
 
 console.log('add success:', add(4, 6) === 10);
 
@@ -47,7 +47,7 @@ Instructions: Write a function that multiplies two given numbers
 Example: "multiply(2, 3) should return 6"
 ===================== */
 
-let multiply = (n , i) => return n * i;
+let multiply = (n , i) => n * i;
 
 console.log('multiply success:', multiply(4, 6) === 24);
 
