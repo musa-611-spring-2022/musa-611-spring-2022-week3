@@ -83,10 +83,8 @@ high schools (hint: another attribute besides TYPE will be useful...).
 
 let publicHighSchools = [];
 schools.forEach((school) => {
-  if (school.TYPE_SPECIFIC === 'DISTRICT' || school.TYPE_SPECIFIC === 'CONTRACTED') {
-    if (school.GRADE_LEVEL === 'HIGH SCHOOL' || school.GRADE_LEVEL === 'MIDDLE/HIGH' || school.GRADE_LEVEL === 'ELEMENTARY/MIDDLE/HIGH') {
-      publicHighSchools.push(school);
-    }
+  if (school.GRADE_LEVEL.includes('HIGH') && school.TYPE === '1') {
+    publicHighSchools.push(school);
   }
 });
 
