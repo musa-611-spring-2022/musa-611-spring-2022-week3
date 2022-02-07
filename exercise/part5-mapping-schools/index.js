@@ -79,8 +79,8 @@ for (const [key, value] of Object.entries(schools)) {
 }
 */
 console.log(
-  schools[50]['schoolTypeDict']
-)
+  schools[50].schoolTypeDict,
+);
 
 /* =====================
 Step 2: Prepare the data
@@ -89,8 +89,8 @@ Create a new variable "publicHighSchools" that only contains data for the public
 high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
-let isHS = (school) => {return school.GRADE_LEVEL==='HIGH SCHOOL'};
-let isPublic = (school) => {return school.TYPE==="1"};
+let isHS = (school) => school.GRADE_LEVEL === 'HIGH SCHOOL';
+let isPublic = (school) => school.TYPE === '1';
 
 let publicHighSchools = schools.filter(isHS).filter(isPublic);
 // console.log(publicHighSchools);
@@ -107,9 +107,8 @@ function addPlace(map, lat, lng, name) {
 }
 
 publicHighSchools.forEach((school) => {
-    const lat = school.Y;
-    const lng = school.X;
-    const nme = school.SCHOOL_NAME_LABEL;
-    addPlace(Gmap, lat, lng, nme)
-  }
-)
+  const lat = school.Y;
+  const lng = school.X;
+  const nme = school.SCHOOL_NAME_LABEL;
+  addPlace(Gmap, lat, lng, nme);
+});
