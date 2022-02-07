@@ -13,7 +13,7 @@ Example: "age(2000) should return 22"
 
 let age = (birthYear) => 2022 - birthYear;
 
-     console.log('age success:', age(1971) === 51);
+console.log('age success:', age(1971) === 51);
 
 /* =====================
 Instructions: Write a function that adds one to the number provided
@@ -65,15 +65,15 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = (object, value) => object[value]
+let valueAtKey = (object, value) => object[value];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = (number1) => number1 % 2 === 0
+let isEven = (number1) => number1 % 2 === 0;
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 
@@ -81,6 +81,6 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
-let isOdd = (number2) => number2 % 2 !== 0
+let isOdd = (number2) => number2 % 2 !== 0;
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
