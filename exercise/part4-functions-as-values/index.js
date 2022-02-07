@@ -68,7 +68,7 @@ let reduce = (arr, func, initial) => {
   for (let i = 0; i < arr.length; i++) {
     updatedArr = func(updatedArr, arr[i]);
   }
-  return newArray;
+  return updatedArr;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
