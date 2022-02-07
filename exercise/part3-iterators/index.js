@@ -59,7 +59,7 @@ let filterOdd = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (isOdd(arr[i])) {
-      newArr.push(arr[i])
+      newArr.push(arr[i]);
     }
   }
   return newArr;
