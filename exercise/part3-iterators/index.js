@@ -5,7 +5,8 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions.
+Each exercise here builds on that theme.
 ===================== */
 
 /* =====================
@@ -15,12 +16,13 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 
 let countItem = (arr, item) => {
   let counter = 0;
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i] === item){
-      counter++}
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === item) {
+      counter++;
+    }
   }
   return counter;
-}
+};
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
@@ -31,15 +33,15 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = num => {
-  return (num%2==0)
+let isEven = (num) => {
+  return (num % 2 === 0);
 };
 
 let filterEven = (arr) => {
-  let newArr = []
-  for (let i = 0; i < arr.length; i++){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
     isEven(arr[i]) ? newArr.push(arr[i]) : console.log('odd')
-    }
+  }
   return newArr
 };
 
@@ -52,14 +54,14 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (num) => {
-  return (num%2==1)
+  return (num % 2 === 1);
 };
 
 let filterOdd = (arr) => {
-  let newArr = []
-  for (let i = 0; i < arr.length; i++){
-    isOdd(arr[i]) ? newArr.push(arr[i]) : console.log('odd')
-    }
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    isOdd(arr[i]) ? newArr.push(arr[i]) : console.log('odd');
+  }
   return newArr
 };
 
@@ -73,16 +75,15 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let plusOne = (num) => {
-  return num+1
+  return num + 1;
 };
 
 let mapIncrement = (arr) => {
-  let newArr = []
-  for (let i = 0; i < arr.length; i++){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
     newArr.push(plusOne(arr[i]));
-    }
+  }
   return newArr
-
 };
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -95,13 +96,13 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let timesThree = (num) => {
-  return num*3
+  return num * 3;
 };
 let mapTriple = (arr) => {
-  let newArr = []
-  for (let i = 0; i < arr.length; i++){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
     newArr.push(timesThree(arr[i]));
-    }
+  }
   return newArr
 };
 
@@ -115,14 +116,14 @@ Instructions: Write a function which takes an array and returns the sum of all
 ===================== */
 
 let add = (n1, n2) => {
-  return n1+n2
+  return n1 + n2;
 };
 let reduceSum = (arr) => {
   let sum = 0
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     sum = add(sum, arr[i]);
-    }
-  return sum
+  }
+  return sum;
 };
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
@@ -135,13 +136,13 @@ Instructions: Write a function which takes an array and returns the product of
 ===================== */
 
 let multiply = (n1, n2) => {
-  return n1*n2
+  return n1 * n2;
 };
 let reduceProduct = (arr) => {
-  let prod = 1
-  for (let i = 0; i < arr.length; i++){
+  let prod = 1;
+  for (let i = 0; i < arr.length; i++) {
     prod = multiply(prod, arr[i]);
-    }
+  }
   return prod
 };
 

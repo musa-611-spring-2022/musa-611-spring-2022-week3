@@ -18,13 +18,13 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let filter = (arr, pred) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++){
-    if(pred(arr[i])){
+  for (let i = 0; i < arr.length; i++) {
+    if (pred(arr[i])) {
       newArr.push(arr[i]);
     }
   }
   return newArr;
-}
+};
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));
@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let map = (arr, func) => {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     newArr.push(func(arr[i]));
   }
   return newArr
@@ -67,11 +67,11 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
   let reduced = initial;
-  for (let i = 0; i < arr.length; i++){
+  for (let i = 0; i < arr.length; i++) {
     reduced = func(reduced, arr[i]);
   }
   return reduced;
-}
+};
 
 //  return arr.reduce(func, initial)};
 
@@ -87,7 +87,7 @@ Bonus: Create a function called sumSquares that takes an array and returns
 ===================== */
 
 let sumSquares = (arr) => {
-    return reduce(map(arr, (x) => x*x),add,0);
+    return reduce(map(arr, (x) => x*x), add, 0);
 };
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);

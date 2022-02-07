@@ -12,7 +12,7 @@ Example: "age(2000) should return 22"
 ===================== */
 
 let age = (birthYear) => {
-  return 2022-birthYear
+  return 2022 - birthYear;
 };
 
 console.log('age success:', age(1971) === 51);
@@ -23,7 +23,7 @@ Example: "plusOne(2) should return 3"
 ===================== */
 
 let plusOne = num => {
-  return num+1
+  return num + 1;
 };
 
 console.log('plusOne success:', plusOne(99) === 100);
@@ -34,7 +34,7 @@ Example: "timesThree(2) should return 6"
 ===================== */
 
 let timesThree = num => {
-  return num*3
+  return num * 3;
 };
 
 console.log('timesThree success:', timesThree(33) === 99);
@@ -45,7 +45,7 @@ Example: "add(2, 3) should return 5"
 ===================== */
 
 let add = (num1, num2) => {
-  return num1+num2
+  return num1 + num2;
 };
 
 console.log('add success:', add(4, 6) === 10);
@@ -56,7 +56,7 @@ Example: "multiply(2, 3) should return 6"
 ===================== */
 
 let multiply = (num1, num2) => {
-  return num1*num2
+  return num1 * num2;
 };
 
 console.log('multiply success:', multiply(4, 6) === 24);
@@ -67,7 +67,7 @@ Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return '
 ===================== */
 
 let valueAtIndex = (array, i) => {
-  return array[i]
+  return array[i];
 };
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
@@ -78,7 +78,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
 let valueAtKey = (object, key) => {
-  return object[key]
+  return object[key];
 };
 
 console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
@@ -88,7 +88,7 @@ Instructions: Write a function that returns true if a number is even.
 ===================== */
 
 let isEven = num => {
-  return (num%2==0)
+  return (num % 2 === 0);
 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
@@ -98,7 +98,7 @@ Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
 let isOdd = num => {
-  return (num%2==1)
+  return (num % 2 === 1);
 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
