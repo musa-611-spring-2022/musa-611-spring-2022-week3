@@ -20,7 +20,7 @@ Instructions: Write a function that adds one to the number provided
 Example: "plusOne(2) should return 3"
 ===================== */
 
-let plusOne = (i) => i++;
+let plusOne = (i) => i + 1;
 
 console.log('plusOne success:', plusOne(99) === 100);
 
