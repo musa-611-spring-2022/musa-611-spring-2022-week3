@@ -13,7 +13,11 @@ Instructions: Write a function which counts the number of times a value occurs i
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
-let countItem = (arr, item) => {};
+let countItem = (arr, item) => {
+  sum = 0;
+  arr.forEach(x === item && sum + 1));
+  return sum;
+};  
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
