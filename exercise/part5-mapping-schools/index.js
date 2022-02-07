@@ -84,7 +84,7 @@ high schools (hint: another attribute besides TYPE will be useful...).
 let publicHighSchools = [];
 
 schools.forEach((school) => {
-  if (school.GRADE_LEVEL.indexOf('HIGH') != -1 && school.TYPE === '1') {
+  if (school.GRADE_LEVEL.indexOf('HIGH') !== -1 && school.TYPE === '1') {
     publicHighSchools.push(school);
   }
 });
