@@ -82,7 +82,7 @@ high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
 let publicHighSchools = schools.filter((school) =>
-(school.TYPE === 2 || school.TYPE === 1) && school.GRADE_LEVEL === 'HIGH SCHOOL');
+(school.TYPE == 2 || school.TYPE == 1) && school.GRADE_LEVEL == 'HIGH SCHOOL');
 
 /* =====================
 Step 3: Display the data
