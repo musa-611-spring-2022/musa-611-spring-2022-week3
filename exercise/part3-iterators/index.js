@@ -38,7 +38,9 @@ let isEven = (num) => (num % 2 === 0);
 let filterEven = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    isEven(arr[i]) ? newArr.push(arr[i]) : console.log('odd');
+    if (isEven(arr[i])) {
+      newArr.push(arr[i]);
+    }
   }
   return newArr;
 };
@@ -56,7 +58,9 @@ let isOdd = (num) => (num % 2 === 1);
 let filterOdd = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    isOdd(arr[i]) ? newArr.push(arr[i]) : console.log('odd');
+    if (isOdd(arr[i])) {
+      newArr.push(arr[i])
+    }
   }
   return newArr;
 };
@@ -125,9 +129,8 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (n1, n2) => {
-  return n1 * n2;
-};
+let multiply = (n1, n2) = n1 * n2;
+
 let reduceProduct = (arr) => {
   let prod = 1;
   for (let i = 0; i < arr.length; i++) {
