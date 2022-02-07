@@ -81,7 +81,7 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = schools.filter(school => (school['TYPE'] == 2 || school['TYPE'] == 1) && school['GRADE_LEVEL'] == 'HIGH SCHOOL');
 
 /* =====================
 Step 3: Display the data
