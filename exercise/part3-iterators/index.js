@@ -39,7 +39,7 @@ let isEven = (x) => {
 let filterEven = (arr) =>
   arr.filter(isEven);
 
-console.log('filterEven success:', filterEven([1, 2, 3, 4, 5, 4, 4]) === [2, 4, 4, 4]);
+console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -56,7 +56,7 @@ let isOdd = (x) => {
 };
 let filterOdd = (arr) => arr.filter(isOdd);
 
-console.log('filterOdd success:', filterOdd([1, 2, 3, 4, 5, 4, 4]) === [1, 3, 5]);
+console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -68,7 +68,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let plusOne = (i) => i + 1;
 let mapIncrement = (arr) => arr.map(plusOne);
 
-console.log('mapIncrement success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [2, 3, 4, 5, 6, 5, 5]);
+console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -80,7 +80,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let timesThree = (X) => X * 3;
 let mapTriple = (arr) => arr.map(timesThree);
 
-console.log('mapTriple success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
+console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
