@@ -46,7 +46,7 @@ let filterEven = (arr) => {
   return result;
 };
 
-console.log('filterEven success:', filterEven([1, 2, 3, 4, 5, 4, 4]) === [2, 4, 4, 4]);
+console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -68,7 +68,7 @@ let filterOdd = (arr) => {
   return result;
 };
 
-console.log('filterOdd success:', filterOdd([1, 2, 3, 4, 5, 4, 4]) === [1, 3, 5]);
+console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -89,7 +89,7 @@ let mapIncrement = (arr) => {
   return result
 };
 
-console.log('mapIncrement success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [2, 3, 4, 5, 6, 5, 5]);
+console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -110,7 +110,7 @@ let mapTriple = (arr) => {
   return result;
 };
 
-console.log('mapTriple success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [3, 6, 9, 12, 15, 12, 12]);
+console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
