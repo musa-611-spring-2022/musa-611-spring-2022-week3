@@ -39,7 +39,7 @@ let map = (arr, func) => {
   for (let i = 0; i < arr.length; i++) {
     newArr.push(func(arr[i]));
   }
-  return newArr
+  return newArr;
 };
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -86,8 +86,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {
-    return reduce(map(arr, (x) => x*x), add, 0);
-};
+let sumSquares = (arr) => reduce(map(arr, (x) => x * x), add, 0);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);

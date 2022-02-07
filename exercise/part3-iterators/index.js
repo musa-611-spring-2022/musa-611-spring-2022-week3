@@ -33,16 +33,14 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (num) => {
-  return (num % 2 === 0);
-};
+let isEven = (num) => (num % 2 === 0);
 
 let filterEven = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
-    isEven(arr[i]) ? newArr.push(arr[i]) : console.log('odd')
+    isEven(arr[i]) ? newArr.push(arr[i]) : console.log('odd');
   }
-  return newArr
+  return newArr;
 };
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
@@ -53,16 +51,14 @@ Instructions: Write a function which takes an array and returns a new array with
   function MUST use the isOdd function and MUST NOT change the original array.
 ===================== */
 
-let isOdd = (num) => {
-  return (num % 2 === 1);
-};
+let isOdd = (num) => (num % 2 === 1);
 
 let filterOdd = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     isOdd(arr[i]) ? newArr.push(arr[i]) : console.log('odd');
   }
-  return newArr
+  return newArr;
 };
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
@@ -74,16 +70,14 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (num) => {
-  return num + 1;
-};
+let plusOne = (num) => num + 1;
 
 let mapIncrement = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     newArr.push(plusOne(arr[i]));
   }
-  return newArr
+  return newArr;
 };
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -95,15 +89,13 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (num) => {
-  return num * 3;
-};
+let timesThree = (num) => num * 3;
 let mapTriple = (arr) => {
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     newArr.push(timesThree(arr[i]));
   }
-  return newArr
+  return newArr;
 };
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -115,11 +107,9 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (n1, n2) => {
-  return n1 + n2;
-};
+let add = (n1, n2) => n1 + n2;
 let reduceSum = (arr) => {
-  let sum = 0
+  let sum = 0;
   for (let i = 0; i < arr.length; i++) {
     sum = add(sum, arr[i]);
   }
@@ -143,7 +133,7 @@ let reduceProduct = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     prod = multiply(prod, arr[i]);
   }
-  return prod
+  return prod;
 };
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
