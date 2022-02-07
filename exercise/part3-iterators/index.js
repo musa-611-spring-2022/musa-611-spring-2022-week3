@@ -15,7 +15,7 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 
 let countItem = (arr, item) => {
   sum = 0;
-  arr.forEach((x) =>(x === item && sum + 1));
+  arr.forEach((x) =>(x === item && sum++));
   return sum;
 };
 
