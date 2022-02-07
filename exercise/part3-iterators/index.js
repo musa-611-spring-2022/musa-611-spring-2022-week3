@@ -65,8 +65,8 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let plusOne = (n) => {};
-let mapIncrement = (arr) => {};
+let plusOne = (n) => n + 1;
+let mapIncrement = (arr) => arr.map(plusOne);
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
@@ -77,10 +77,8 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (n) => {
-  return n * 3
-};
-let mapTriple = (arr) => arr.map((x) => timesThree(x));
+let timesThree = (n) => n * 3;
+let mapTriple = (arr) => arr.map(timesThree)
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
@@ -91,12 +89,8 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let add = (n,i) => {
-  return n + i
-};
-let reduceSum = (arr) => {
-  arr.reduce(add,0)
-};
+let add = (n,i) => n + i;
+let reduceSum = (arr) => arr.reduce(add);
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
 
@@ -107,11 +101,7 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-let multiply = (n,i) => {
-  return n * i
-};
-let reduceProduct = (arr) => {
-  arr.reduce(multiply, 1)
-};
+let multiply = (n,i) => n * i;
+let reduceProduct = (arr) => arr.reduce(multiply);
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
