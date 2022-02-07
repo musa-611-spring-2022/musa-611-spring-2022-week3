@@ -5,7 +5,8 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions. 
+Each exercise here builds on that theme.
 ===================== */
 
 /* =====================
@@ -14,10 +15,10 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
 let countItem = (arr, item) => {
-  let n = 0
+  let n = 0;
   for (const i of arr) {
     if (i === item) {
-      n ++;
+      n++;
     }
   }
   return n;
@@ -35,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let isEven = (number) => number % 2 === 0;
 
 let filterEven = (arr) => {
-  let result = []
+  let result = [];
   for (const i of arr) {
     if (isEven(i)) {
       result.push(i);
@@ -55,7 +56,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let isOdd = (number) => number % 2 === 1;
 
 let filterOdd = (arr) => {
-  let result = []
+  let result = [];
   for (const i of arr) {
     if (isOdd(i)) {
       result.push(i);
@@ -76,11 +77,11 @@ Instructions: Write a function which takes an array and returns a new array with
 let plusOne = (number) => number + 1;
 
 let mapIncrement = (arr) => {
-  let result = []
+  let result = [];
   for (const i of arr) {
     result.push(plusOne(i));
   }
-  return result
+  return result;
 };
 
 console.log('mapIncrement success:', mapIncrement([1, 2, 3, 4, 5, 4, 4]) === [2, 3, 4, 5, 6, 5, 5]);
@@ -95,7 +96,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let timesThree = (number) => number * 3;
 
 let mapTriple = (arr) => {
-  let result = []
+  let result = [];
   for (const i of arr) {
     result.push(timesThree(i));
   }
@@ -114,7 +115,7 @@ Instructions: Write a function which takes an array and returns the sum of all
 let add = (num1, num2) => num1 + num2;
 
 let reduceSum = (arr) => {
-  let sum = 0
+  let sum = 0;
   for (const i of arr) {
     sum = add(sum, i)
   }
@@ -133,11 +134,11 @@ Instructions: Write a function which takes an array and returns the product of
 let multiply = (num1, num2) => num1 * num2;
 
 let reduceProduct = (arr) => {
-  let production = 1
+  let production = 1;
   for (const i of arr) {
-    production = multiply(production, i)
+    production = multiply(production, i);
   }
-  return production
+  return production;
 };
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
