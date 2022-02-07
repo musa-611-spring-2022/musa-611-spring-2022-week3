@@ -72,7 +72,7 @@ let reduce = (arr, func, initial) => {
   // assign it to old value so it can be used in the iterations
   for (let i = 0; i < arr.length; i++) {
     let newVal = arr[i]; // Pull the 'next' value from the array
-    oldVal = func(oldVal, newVal)
+    oldVal = func(oldVal, newVal);
     // Apply the reducing function on the old value and the new value
   }
   return oldVal;
