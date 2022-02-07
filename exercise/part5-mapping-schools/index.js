@@ -78,9 +78,6 @@ for (const [key, value] of Object.entries(schools)) {
   console.log(`${key}: ${value}`);
 }
 */
-console.log(
-  schools[50].schoolTypeDict,
-);
 
 /* =====================
 Step 2: Prepare the data
@@ -112,3 +109,6 @@ publicHighSchools.forEach((school) => {
   const nme = school.SCHOOL_NAME_LABEL;
   addPlace(Gmap, lat, lng, nme);
 });
+
+let map = Gmap;
+console.log(map);
