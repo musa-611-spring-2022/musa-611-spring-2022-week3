@@ -90,10 +90,10 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 let isHS = (school) => school.GRADE_LEVEL === 'HIGH SCHOOL';
-let isPublic = (school) => school.TYPE === '1';
+let isPublic = (school) => school.TYPE !== '3';
 
 let publicHighSchools = schools.filter(isHS).filter(isPublic);
-// console.log(publicHighSchools);
+console.log(publicHighSchools.length);
 
 /* =====================
 Step 3: Display the data
