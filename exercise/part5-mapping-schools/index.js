@@ -103,5 +103,5 @@ function addPlace(lat, lng, name) {
 }
 
 publicHighSchools.forEach((location) => {
-  addPlace(location.X, location.Y, items.SCHOOL_NAME);
+  addPlace(location.X, location.Y, location.SCHOOL_NAME);
 });
