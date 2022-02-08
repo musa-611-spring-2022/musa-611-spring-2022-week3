@@ -62,6 +62,7 @@ schools.forEach((school) => {
   schoolTypeDict[type] = correlatedSubtypes;
 });
 
+
 /*
 In your JavaScript console, set a breakpoint inside of the forEach iterator and
 step through the code. Try to understand what it's doing. For how to set a
@@ -81,7 +82,20 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = [];
+
+schools.forEach((school) => {
+  let type = school.TYPE;
+  let grade = school.GRADE_LEVEL;
+  if (type === '1' && grade.includes('HIGH')) {
+    publicHighSchools.push(school);
+  }
+});
+
+// What if we wanted to push without filtering for something?
+// Would we just go straight to the marker?
+// What if we wanted things to show up without converting to an array?
+// or is the array standard?
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +103,7 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+publicHighSchools.forEach((school) => {
+  L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
+});
