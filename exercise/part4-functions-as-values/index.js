@@ -87,7 +87,7 @@ Bonus: Create a function called sumSquares that takes an array and returns
 let sumSquares = (arr) => {
   const nuevoArr = [];
   for (let i = 0; i < arr.length; i++) {
-    nuevoArr.push(Math.pow(i));
+    nuevoArr.push(arr[i] * arr[i]);
   }
   return nuevoArr.reduce(add);
 };
