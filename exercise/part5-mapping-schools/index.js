@@ -87,7 +87,7 @@ schools.forEach((school) => {
   const type = school.TYPE;
   const gradeLvl = school.GRADE_LEVEL;
 
-  if (gradeLvl === 'HIGH SCHOOL' && type === '1') {
+  if (gradeLvl.includes('HIGH') && type === '1') {
     publicHighSchools.push(school);
   }
 });
