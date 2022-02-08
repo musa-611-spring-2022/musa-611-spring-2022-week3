@@ -67,7 +67,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (object, key) => object[key];
 
-console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, foo) === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
@@ -87,8 +87,8 @@ Instructions: Write a function that returns true if a number is odd.
 
 let isOdd = (x) => {
   if (x % 2 !== 0) {
-    return true
-  return false;
+    return true;
+  } return false;
 };
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
