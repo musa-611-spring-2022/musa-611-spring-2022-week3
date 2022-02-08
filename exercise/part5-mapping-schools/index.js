@@ -93,8 +93,8 @@ schools.forEach((school) => {
 });
 
 // What if we wanted to push without filtering for something?
-//Would we just go straight to the marker?
-//What if we wanted things to show up without converting to an array?
+// Would we just go straight to the marker?
+// What if we wanted things to show up without converting to an array?
 // or is the array standard?
 
 /* =====================

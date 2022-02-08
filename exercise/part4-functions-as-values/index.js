@@ -102,10 +102,10 @@ let square = (num) => num * num;
 
 let sumSquares = (arr) => {
   // 1. square each number in array
-    // 2. return new array
-let sqArr = arr.map(square);
+  // 2. return new array
+  let sqArr = arr.map(square);
   // 3. add each number together
-let sumSq = sqArr.reduce(add);
+  let sumSq = sqArr.reduce(add);
   // 4. return final sum
   return sumSq;
 };
