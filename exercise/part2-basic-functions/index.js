@@ -14,7 +14,7 @@ Example: "age(2000) should return 22"
 // let age = (birthYear) => {
 //   return 2022 - birthYear;
 // };
-let age = (birthYear) => 2022 - birthYear
+let age = (birthYear) => 2022 - birthYear;
 
 console.log('age success:', age(1971) === 51);
 
@@ -94,7 +94,7 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 
 let valueAtKey = (object, key) => object[key];
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.

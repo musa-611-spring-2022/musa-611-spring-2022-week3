@@ -18,7 +18,7 @@ Instructions: Write a function which takes an array and returns a new array,
 
 let filter = (arr, pred) => {
   let result = [];
-  for (let i=0; i<arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (pred(arr[i])) {
       result.push(arr[i]);
     }
@@ -47,9 +47,9 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
- let result = [];
-for (let i=0; i< arr.length; i++) {
-  result.push(func(arr[i]));
+  let result = [];
+  for (let i = 0; i < arr.length; i++) {
+    result.push(func(arr[i]));
   }
   return result;
 };
@@ -79,9 +79,9 @@ Instructions: Write a function which takes an array and returns the value of
 
 let reduce = (arr, func, initial) => {
   let value = initial;
-  for(let i = 0; i < arr.length; i++) {
-    let currentValue = arr[i]
-    value = func(value, currentValue)
+  for (let i = 0; i < arr.length; i++) {
+    let currentValue = arr[i];
+    value = func(value, currentValue);
   }
   return value;
 };
@@ -98,16 +98,14 @@ Bonus: Create a function called sumSquares that takes an array and returns
   FUNCTIONS ABOVE -- NO VARIABLE DEFINITIONS (you can also reuse the `add` and
   `multiply` functions that you developed before).
 ===================== */
-let square = (num) => {
-  return num * num
-};
+let square = (num) => num * num;
 
 let sumSquares = (arr) => {
   // 1. square each number in array
     // 2. return new array
-  let sqArr = arr.map(square);
+let sqArr = arr.map(square);
   // 3. add each number together
-  let sumSq = sqArr.reduce(add);
+let sumSq = sqArr.reduce(add);
   // 4. return final sum
   return sumSq;
 };
@@ -115,4 +113,4 @@ let sumSquares = (arr) => {
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
 
 
-// This can also be written simply as   return arr.map(square).reduce(add) 
+// This can also be written simply as   return arr.map(square).reduce(add)
