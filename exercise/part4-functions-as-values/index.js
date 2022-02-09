@@ -33,7 +33,12 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => arr.map((number) => func(number));
+let map = (arr, func) =>  {
+  let temp = [];
+  for (let i = 0; i < arr.length; i++) {
+    temp.push(func(arr[i]));
+  } return temp;
+};
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -58,7 +63,12 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => arr.reduce(func, initial);
+let reduce = (arr, func, initial) => {
+  let reduction = initial;
+  arr.forEach((number) => {
+    reduction = func(reduction, number);
+  }); return reduction;
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
