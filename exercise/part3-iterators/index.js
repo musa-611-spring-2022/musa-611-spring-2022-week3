@@ -13,9 +13,7 @@ Instructions: Write a function which counts the number of times a value occurs i
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
-let countItem = (arr, item) => {
-  return arr.reduce((count, val) => (val === item ? count + 1 : count), 0);
-};
+let countItem = (arr, item) => arr.reduce((count, val) => (val === item ? count + 1 : count), 0);
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
@@ -27,7 +25,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isEven = (n) => n % 2 === 0;
-let filterEven = (arr) => arr.filter(n => isEven(n));
+let filterEven = (arr) => arr.filter((n) => isEven(n));
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -38,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (n) => n % 2 === 1;
-let filterOdd = (arr) => arr.filter(n => isOdd(n));
+let filterOdd = (arr) => arr.filter((n) => isOdd(n));
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
 
@@ -50,7 +48,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let plusOne = (n) => n + 1;
-let mapIncrement = (arr) => arr.map(n => plusOne(n));
+let mapIncrement = (arr) => arr.map((n) => plusOne(n));
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
@@ -62,7 +60,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let timesThree = (n) => n * 3;
-let mapTriple = (arr) => arr.map(n => timesThree(n));
+let mapTriple = (arr) => arr.map((n) => timesThree(n));
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
