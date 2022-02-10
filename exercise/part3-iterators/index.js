@@ -13,7 +13,21 @@ Instructions: Write a function which counts the number of times a value occurs i
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
-let countItem = (arr, item) => {};
+/* This is when I don't know filter() in this solution 
+
+let countItem = (arr, item) => {
+  a = arr.length;
+  b = 0;
+  for (n = 0; n < a; n += 1){
+    if(arr[n] === item){
+      b += 1;
+    }
+  }
+  return b
+};
+*/
+
+let countItem = (arr, item) => {
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
@@ -24,8 +38,22 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (n) => {};
-let filterEven = (arr) => {};
+let isEven = (n) => {
+  return n % 2 === 0
+};
+
+let filterEven = (arr) => {
+    a = arr.length;
+    b = 0;
+    c = []
+    for (n = 0; n < a; n += 1){
+      if(isEven(arr[n])){
+        c[b] = arr[n]
+      }
+      b += 1
+    return b
+  }
+}
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -62,7 +90,7 @@ Instructions: Write a function which takes an array and returns a new array with
 let timesThree = (n) => {};
 let mapTriple = (arr) => {};
 
-console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
+console.log('mapTriple success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
 /* =====================
 Instructions: Write a function which takes an array and returns the sum of all
