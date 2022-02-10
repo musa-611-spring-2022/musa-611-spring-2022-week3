@@ -40,7 +40,7 @@ let timesThree = (a) => {
 console.log('timesThree success:', timesThree(33) === 99);
 
 /* =====================
-Instructions: Write a function that adds two given numbers
+Instructions: Write a function that add at the given indexs two given numbers
 Example: "add(2, 3) should return 5"
 ===================== */
 
@@ -67,7 +67,7 @@ Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return '
 ===================== */
 
 let valueAtIndex = (a, b) => {
-    return a[2]
+    return a[b]
 };
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
