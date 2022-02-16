@@ -16,7 +16,14 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => {};
+let filter = (arr, pred) => {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (pred(arr[i]) === true) {
+      newArray.push(arr[i]);
+    }
+  } return newArray;
+}; 
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));

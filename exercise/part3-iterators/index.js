@@ -54,7 +54,7 @@ let filterEven = (arr) => {
 };
 */
 let isEven = (x) => {return x % 2 ==  0};
-let filterEven = (arr) => {arr.filter(isEven)};
+let filterEven = (arr) => arr.filter((number) => isEven(number));
 
 console.log('filterEven success:', _(filterEven([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 4, 4, 4]));
 
@@ -65,6 +65,7 @@ Instructions: Write a function which takes an array and returns a new array with
 
 let isOdd = (x) => {return (x % 2 !== 0)};
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
+ASK ABOUT ISEVEN VS ISODD
 ===================== */
 
 let isOdd = (n) => {return (x % 2 !== 0)};
@@ -77,6 +78,8 @@ Instructions: Write a function which takes an array and returns a new array with
   each item incremented. Copy your definition of plusOne from part 1; your
   mapIncrement function MUST use the plusOne function and MUST NOT change the
   original array.
+.map returns whole array, filter return array based on subset that is defined
+  arr.map((number) => plusOne(number));
 ===================== */
 
 let plusOne = (n) => {return (n + 1)};
