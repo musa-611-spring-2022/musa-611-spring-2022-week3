@@ -16,7 +16,7 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 let countItem = (arr, item) => {arr.filter(arrs) => item };
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
-/* =====================
+
 let isItem = (n) => {
   if (n  === 3) {
     return true;
@@ -33,9 +33,6 @@ let countItem = (arr, item) => {
   };
   arr.filter((arrs) => isItem(arrs) === true
 };
-===================== */
-
-
 /* =====================
 ===================== */
 let countItem = (arr, item) => {
@@ -50,7 +47,6 @@ let countItem = (arr, item) => {
 
 console.log('filterEven success:', filterEven([1, 2, 3, 4, 5, 4, 4]) === [2, 4, 4, 4]);
 
-/* =====================
 let countItem = (arr, item) => {
   let isItem = (n) => {
     if (n === item) {
@@ -61,7 +57,6 @@ let countItem = (arr, item) => {
   let occurrences = arr.filter(isItem);
   return occurrences.length;
 };
-===================== */
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
