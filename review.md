@@ -156,4 +156,11 @@ const isPlanet = (body) => {
 const planets = solarSystemBodies
   .filter(isPlanet)
   .map((p) => p.name);
+
+solarSystemBodies.filter(isPlanet).map((p) => {return p.name}) // same function
+
+const getPlanetName = (p) => {return p.name};
+getPlanetName(solarSystemBodies[0])
+const planets = solarSystemBodies.filter(isPlanet)
+planets.map(getPlanetName) // same function, returns array
 ```
