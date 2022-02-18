@@ -16,8 +16,7 @@ function that takes one item as input and returns either true or false based
 on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => 
-{    
+let filter = (arr, pred) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (pred(arr[i])) {
@@ -34,8 +33,7 @@ Instructions: Write a function which takes an array and returns a new array,
 where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => 
-{
+let map = (arr, func) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result.push(func(arr[i]));
@@ -66,12 +64,10 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => 
-{ 
+let reduce = (arr, func, initial) => {
   let result = initial;
-  for (let i = 0; i < arr.length; i++) { 
-    let x = arr[i];
-    result = function(result, x); 
+  for (const x of arr) {
+    result = func(result, x);
   }
   return result;
 };
@@ -87,7 +83,13 @@ FUNCTIONS ABOVE -- NO VARIABLE DEFINITIONS (you can also reuse the `add` and
 `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => 
-arr.map(("a") => "a" ** 2).reduce(add);
+let sumSquares = (arr) => {
+  let array2 = [];
+  for (let i = 0; i < arr.length; i++) {
+    array2.push((arr[i] ** 2));
+  }
+  return array2.reduce(add);
+};
+
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
