@@ -97,7 +97,7 @@ Add a tooltip to each marker that contains the name of the school.
 
 let addPlace = (lat, lng, name) => {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
-}
+};
 
 publicHighSchools.forEach((school) => {
   addPlace(school.Y, school.X, school.SCHOOL_NAME);

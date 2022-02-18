@@ -30,9 +30,8 @@ console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqua
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array,
-  where each item has a function applied to it.
+where each item has a function applied to it.
 ===================== */
-
 
 let map = (arr, func) => {
   let result = [];
@@ -65,11 +64,11 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { 
+let reduce = (arr, func, initial) => {  
   let result = initial;
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) { 
     let x = arr[i];
-    result = function(result, x);
+    result = function(result, x); 
   }
   return result;
 };

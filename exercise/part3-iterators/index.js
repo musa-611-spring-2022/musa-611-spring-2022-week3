@@ -5,7 +5,8 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions.
+Each exercise here builds on that theme.
 ===================== */
 
 /* =====================
@@ -22,6 +23,8 @@ let countItem = (arr, item) => {
   }
   return occurrences;
 };
+
+console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array with
@@ -55,7 +58,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 
-let plusOne = (n) => n+1;
+let plusOne = (n) => n + 1;
 let mapIncrement = (arr) => arr.map(plusOne);
 
 
@@ -68,7 +71,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let timesThree = (n) => n*3;
+let timesThree = (n) => n * 3;
 let mapTriple = (arr) => arr.map(timesThree);
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -96,6 +99,7 @@ let multiply = (n1, n2) => n1 * n2;
 let reduceProduct = (arr) => arr.reduce(multiply);
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
+
 
 /* =====================
 end
