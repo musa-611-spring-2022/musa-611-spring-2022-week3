@@ -26,13 +26,9 @@ Start code
 ===================== */
 
 // For-loops with numbers
-// Step 1:
-for (let n = 1; n < 101; n++) 
-    console.log(`${n}`);
-
-// Step 2 & 3:
+// Step 1 , 2 & 3:
 for (let n = 1; n < 101; n++) {
-  if (n % 15 === 0){
+  if (n % 15 === 0) {
     console.log('FizzBuzz');
   } else if (n % 3 === 0) {
     console.log('Fizz');
@@ -40,6 +36,7 @@ for (let n = 1; n < 101; n++) {
     console.log('Buzz');
   } else {
     console.log(`${n}`);
+  }
 }
 
 

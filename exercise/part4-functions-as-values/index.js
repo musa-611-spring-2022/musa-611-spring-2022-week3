@@ -11,12 +11,13 @@ and reduce.
 
 /* =====================
 Instructions: Write a function which takes an array and returns a new array,
-  filtered according to a "predicate" that you procide (a predicate is a
-  function that takes one item as input and returns either true or false based
-  on whether the item satisfies some condition).
+filtered according to a "predicate" that you procide (a predicate is a
+function that takes one item as input and returns either true or false based
+on whether the item satisfies some condition).
 ===================== */
 
-let filter = (arr, pred) => {    
+let filter = (arr, pred) => 
+{    
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (pred(arr[i])) {
@@ -33,7 +34,8 @@ Instructions: Write a function which takes an array and returns a new array,
 where each item has a function applied to it.
 ===================== */
 
-let map = (arr, func) => {
+let map = (arr, func) => 
+{
   let result = [];
   for (let i = 0; i < arr.length; i++) {
     result.push(func(arr[i]));
@@ -64,7 +66,8 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => {  
+let reduce = (arr, func, initial) => 
+{ 
   let result = initial;
   for (let i = 0; i < arr.length; i++) { 
     let x = arr[i];
@@ -79,11 +82,12 @@ console.log('reduce success #3:', _(reduce([1, 2, 3, 4, 5, 4, 4], (x, y) => [y, 
 
 /* =====================
 Bonus: Create a function called sumSquares that takes an array and returns
-  the sum of each item in the array squared. TRY TO ONLY USE THE MAP AND REDUCE
-  FUNCTIONS ABOVE -- NO VARIABLE DEFINITIONS (you can also reuse the `add` and
-  `multiply` functions that you developed before).
+the sum of each item in the array squared. TRY TO ONLY USE THE MAP AND REDUCE
+FUNCTIONS ABOVE -- NO VARIABLE DEFINITIONS (you can also reuse the `add` and
+`multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => arr.map((a) => a ** 2).reduce(add);
+let sumSquares = (arr) => 
+arr.map(("a") => "a" ** 2).reduce(add);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
