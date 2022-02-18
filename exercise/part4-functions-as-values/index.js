@@ -17,17 +17,14 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {    
-  let outcome = [];
+  let result = [];
   for (let i = 0; i < arr.length; i++) {
     if (pred(arr[i])) {
-      outcome.push(arr[i]);
+      result.push(arr[i]);
     }
   }
-  return outcome;
+  return result;
 };
- 
-};
-
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));
 
@@ -38,13 +35,12 @@ Instructions: Write a function which takes an array and returns a new array,
 
 
 let map = (arr, func) => {
-  let outcome = [];
+  let result = [];
   for (let i = 0; i < arr.length; i++) {
-    outcome.push(func(arr[i]));
+    result.push(func(arr[i]));
   }
-  return outcome;
+  return result;
 };
-
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -69,8 +65,14 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
-
+let reduce = (arr, func, initial) => { 
+  let result = initial;
+  for (let i = 0; i < arr.length; i++) {
+    let x = arr[i];
+    result = function(result, x);
+  }
+  return result;
+};
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -83,6 +85,6 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-let sumSquares = (arr) => {};
+let sumSquares = (arr) => arr.map((a) => a ** 2).reduce(add);
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
