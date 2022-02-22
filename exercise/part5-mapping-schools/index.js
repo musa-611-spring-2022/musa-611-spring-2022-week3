@@ -84,7 +84,7 @@ high schools (hint: another attribute besides TYPE will be useful...).
 let publicHighSchools = [];
 
 schools.forEach((school) => {
-  if (school.GRADE_LEVEL.includes('HIGH')) {
+  if (school.TYPE === '1' && school.GRADE_LEVEL.includes('HIGH')) {
     publicHighSchools.push(school);
   }
 });
@@ -100,5 +100,5 @@ function addPlace(lat, lng, name) {
 }
 
 publicHighSchools.forEach((location) => {
-  addPlace(location.Y,location.X,location.SCHOOL_NAME);
+  addPlace(location.Y, location.X, location.SCHOOL_NAME);
 });
