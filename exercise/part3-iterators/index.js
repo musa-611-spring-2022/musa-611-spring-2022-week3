@@ -15,12 +15,12 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 
 
 let countItem = (arr, item) => {
-  a = arr.length;
-  b = 0;
-  for (n = 0; n < a; n += 1){
-    if(arr[n] === item){
-      b += 1;
-    }
+  let a = arr.length;
+  let b = 0;
+  for (n = 0; n < a; n += 1) {
+  if(arr[n] === item){
+    b += 1;
+  }
   }
   return b
 };
@@ -41,15 +41,15 @@ let isEven = (n) => {
 
 /*
 let filterEven = (arr) => {
-    a = arr.length;
-    b = 0;
-    c = []
-    for (n = 0; n < a; n += 1){
-      if(isEven(arr[n])){
-        c[b] = arr[n]
-      b += 1
-      }
-    return c
+  a = arr.length;
+  b = 0;
+  c = []
+  for (n = 0; n < a; n += 1){
+    if(isEven(arr[n])){
+    c[b] = arr[n]
+    b += 1
+    }
+  return c
   }
 }
 */
@@ -104,11 +104,11 @@ Instructions: Write a function which takes an array and returns a new array with
 
 
 let timesThree = (a) => {
-  return a * 3
+  return a * 3;
 };
 
 let mapTriple = (arr) => {
-  return arr.map(timesThree) 
+  return arr.map(timesThree); 
 };
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -121,11 +121,11 @@ Instructions: Write a function which takes an array and returns the sum of all
 ===================== */
 
 let add = (a, b) => {
-  return a + b
+  return a + b;
 };
 
 let reduceSum = (arr) => {
-  return arr.reduce(add)
+  return arr.reduce(add);
 };
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
@@ -139,11 +139,11 @@ Instructions: Write a function which takes an array and returns the product of
 
 
 let multiply = (a, b) => {
-  return a * b
+  return a * b;
 };
 
 let reduceProduct = (arr) => {
-  return arr.reduce(multiply)
+  return arr.reduce(multiply);
 };
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
