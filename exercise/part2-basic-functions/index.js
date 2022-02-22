@@ -65,7 +65,7 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-let valueAtKey = (obj, keyName) => { return obj[keyName] ;};
+let valueAtKey = (obj, keyName) => return obj[keyName];
 
 console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
@@ -73,8 +73,7 @@ console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 Instructions: Write a function that returns true if a number is even.
 ===================== */
 
-let isEven = (a) => {
-  if (a % 2 === 0) { return true; }  { return false ;}
+let isEven = (a) => a % 2 === 0;
 };
 
 console.log('isEven success:', isEven(2) === true && isEven(3) === false);
@@ -83,8 +82,6 @@ console.log('isEven success:', isEven(2) === true && isEven(3) === false);
 Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
-let isOdd = (a) => {
-  if (a % 2 === 0){ return false; } { return true; }
-};
+let isOdd = (a) => a % 2 !== 0;
 
 console.log('isOdd success:', isOdd(4) === false && isOdd(5) === true);
