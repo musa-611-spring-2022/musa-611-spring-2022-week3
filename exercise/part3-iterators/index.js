@@ -5,7 +5,7 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise 
+Functions that `return` can be passed as values to other functions. Each exercise
 here builds on that theme.
 ===================== */
 
