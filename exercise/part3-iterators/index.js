@@ -5,11 +5,13 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions.
+Each exercise here builds on that theme.
 ===================== */
 
 /* =====================
-Instructions: Write a function which counts the number of times a value occurs in an array
+Instructions: Write a function which counts the number of times a value occurs
+in an array
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
@@ -23,7 +25,7 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let isEven = (n) => { if (n % 2 == 0) {return true} else {return false}};
+let isEven = (n) => { if (n % 2 === 0) { return true ;} { return false; }};
 let filterEven = (arr) => {
   return arr.filter(ele => isEven(ele));
   };

@@ -17,10 +17,10 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let filter = (arr, pred) => {
-  //return arr.filter (ele => pred(ele));
+  // return arr.filter (ele => pred(ele));
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    if (pred(arr[i])){
+    if (pred(arr[i])) {
       newArray.push(arr[i]);
     }
   }
@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 let map = (arr, func) => {
-  //return arr.map (ele => func(ele));
+  // return arr.map (ele => func(ele));
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
     newArray.push(func(arr[i]));
@@ -102,8 +102,8 @@ Bonus: Create a function called sumSquares that takes an array and returns
 let sumSquares = (arr) => {
   // method one :  return arr.reduce ((a,num) => a + ((num) ** 2), 0);
 
-  var sum = 0;
-  for (var i = 0, len = arr.length; i < len; i++) {
+  let sum = 0;
+  for (let i = 0, len = arr.length; i < len; i++) {
     sum += arr[i] * arr[i];
   }
   return sum;
