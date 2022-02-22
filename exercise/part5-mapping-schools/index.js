@@ -55,12 +55,30 @@ schools.forEach((school) => {
   // for the school's type. If we cannot find an index (i.e., indexOf returns
   // -1) that means that the subtype is not yet in the array of subtypes
   // correlated with the type.
+
   if (correlatedSubtypes.indexOf(subtype) === -1) {
     correlatedSubtypes.push(subtype);
   }
 
   schoolTypeDict[type] = correlatedSubtypes;
+
 });
+
+const schoolGradeDict = {};
+
+schools.forEach((school)=>{
+  const grade = school.GRADE_LEVEL;
+  const grade_o = school.GRADE_ORG;
+
+  const correlatedGrade = schoolGradeDict[grade] || []
+
+  if (correlatedGrade.indexOf(grade_o) === -1){
+    correlatedGrade.push(grade_o)
+  } 
+
+  schoolGradeDict[grade] = correlatedGrade;
+
+})
 
 /*
 In your JavaScript console, set a breakpoint inside of the forEach iterator and
@@ -81,7 +99,10 @@ high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
 
-let publicHighSchools;
+let publicHighSchools = schools.filter(school =>{
+  return school.TYPE === "1" && school.GRADE_LEVEL.includes('HIGH')
+})
+
 
 /* =====================
 Step 3: Display the data
@@ -89,3 +110,10 @@ Step 3: Display the data
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
 ===================== */
+
+
+function addPlace(lat, lng, name) {
+  L.marker([lat, lng]).bindTooltip(name).addTo(map);
+}
+
+publicHighSchools.forEach(school => addPlace(school.Y, school.X, school.SCHOOL_NAME))
