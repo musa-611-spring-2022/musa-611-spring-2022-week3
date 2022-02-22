@@ -17,7 +17,7 @@ Example: countItem(['a', 'b', 'a'], 'a') should return 2
 let countItem = (arr, item) => {
   let a = arr.length;
   let b = 0;
-  for (n = 0; n < a; n += 1) {
+  for (let n = 0; n < a; n += 1) {
     if (arr[n] === item) {
       b += 1;
     }
