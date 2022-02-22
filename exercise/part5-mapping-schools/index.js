@@ -75,10 +75,8 @@ schools.forEach((school) => {
   if (correlatedGrade.indexOf(grade_o) === -1){
     correlatedGrade.push(grade_o)
   } 
-
   schoolGradeDict[grade] = correlatedGrade;
-
-})
+});
 
 /*
 In your JavaScript console, set a breakpoint inside of the forEach iterator and
