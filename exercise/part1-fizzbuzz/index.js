@@ -45,7 +45,7 @@ for (let n = 1; n <= 100; n += 1) {
 
 for (let n = 1; n <= 100; n += 1) {
     if (n % 5 === 0 && n % 3 === 0){
-        console.log('FizzBuzz');
+    console.log('FizzBuzz');
     } else if (n % 3 === 0){
         console.log('Fizz');
     } else if (n % 5 === 0){

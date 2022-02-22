@@ -66,11 +66,11 @@ schools.forEach((school) => {
 
 const schoolGradeDict = {};
 
-schools.forEach((school)=>{
+schools.forEach((school) => {
   const grade = school.GRADE_LEVEL;
   const grade_o = school.GRADE_ORG;
 
-  const correlatedGrade = schoolGradeDict[grade] || []
+  const correlatedGrade = schoolGradeDict[grade] || [];
 
   if (correlatedGrade.indexOf(grade_o) === -1){
     correlatedGrade.push(grade_o)
@@ -116,4 +116,4 @@ function addPlace(lat, lng, name) {
   L.marker([lat, lng]).bindTooltip(name).addTo(map);
 }
 
-publicHighSchools.forEach(school => addPlace(school.Y, school.X, school.SCHOOL_NAME))
+publicHighSchools.forEach(school => addPlace(school.Y, school.X, school.SCHOOL_NAME));
