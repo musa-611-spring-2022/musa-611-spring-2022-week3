@@ -15,7 +15,7 @@ Follow the instructions in the steps below.
 
 let map = L.map('map', {
   center: [39.9522, -75.1639],
-  zoom: 13,
+  zoom: 11,
 });
 L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
   attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -71,6 +71,7 @@ https://github.com/musa-611-spring-2022/musa-611-spring-2022-week3/blob/main/bre
 In the JavaScript console, run "console.log(schoolTypeDict);" to output the
 schoolTypeDict. Which TYPE value represents public schools? (You'll need to know
 this moving forward.)
+1: (2) ['DISTRICT', 'CONTRACTED']
 ===================== */
 
 /* =====================
@@ -80,12 +81,23 @@ Create a new variable "publicHighSchools" that only contains data for the public
 high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
+let identifier = 'HIGH';
+const publicHighSchools = [];
 
-let publicHighSchools;
+
+schools.forEach((school) => {
+  const grade_level = school.GRADE_LEVEL;
+  if (grade_level.includes(identifier)==true) {
+    publicHighSchools.push(school);}})
+
 
 /* =====================
 Step 3: Display the data
 
 Add a marker for each of the publicHighSchools to the map (defined up above).
 Add a tooltip to each marker that contains the name of the school.
+
 ===================== */
+publicHighSchools.forEach((school) => {
+  L.marker([school.Y,school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
+})
