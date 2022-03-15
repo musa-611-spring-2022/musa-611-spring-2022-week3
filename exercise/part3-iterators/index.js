@@ -37,7 +37,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let isOdd = (a) => a % 2 !== 0;
-let filterOdd = (arr) => arr.filter(ele => isOdd(ele));
+let filterOdd = (arr) => arr.filter((ele => isOdd(ele));
 
 console.log('filterOdd success:', _(filterOdd([1, 2, 3, 4, 5, 4, 4])).isEqual([1, 3, 5]));
 
@@ -49,7 +49,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let plusOne = (n) => n + 1;
-let mapIncrement = (arr) => arr.map(ele => plusOne(ele));
+let mapIncrement = (arr) => arr.map((ele => plusOne(ele));
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
 
@@ -61,7 +61,7 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 let timesThree = (n) => n * 3;
-let mapTriple = (arr) => arr.map(ele => timesThree(ele));
+let mapTriple = (arr) => arr.map((ele => timesThree(ele));
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
 
@@ -73,7 +73,7 @@ Instructions: Write a function which takes an array and returns the sum of all
 ===================== */
 
 let add = (n1, n2) => n1 + n2;
-let reduceSum = (arr) => arr.reduce ((a, b) => add (a, b));
+let reduceSum = (arr) => arr.reduce((a, b) => add(a, b));
 
 console.log('reduceSum success:', reduceSum([1, 2, 3, 4, 5, 4, 4]) === 23);
 
@@ -85,6 +85,6 @@ Instructions: Write a function which takes an array and returns the product of
 ===================== */
 
 let multiply = (n1, n2) => n1 * n2;
-let reduceProduct = (arr) => arr.reduce ((ele1, ele2) => multiply (ele1, ele2));
+let reduceProduct = (arr) => arr.reduce((ele1, ele2) => multiply(ele1, ele2));
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);
