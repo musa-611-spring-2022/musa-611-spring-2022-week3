@@ -25,35 +25,15 @@ Start code
 
 ===================== */
 
- // Step1:Display 1 to 100.
-for (let i = 0; i < 101; i++) {
- console.log(i);
-}
-
-
- // Step2-1 :Display multiples of three
-for(var n = 0; n <= 100; n+=3){
-  console.log(n)
-}
-
-// Step2-2 :Display multiples of five
-for(var n = 0; n <= 100; n+=5){
-  console.log(n)
-}
-
-// Step2-3 :Another syntax
-var x;
-for(x = 0; x <= 100; x++){
-if(x % 3 == 0){
-document.write(x);
-  }
-}
-
-// Step3 multiples of *both* three and five
-var y;
-for(y = 0; x <= 100; x++){
-if(y % 3 == 0 || y % 5 == 0){
-document.write(y);
+for (let i = 1; i < 101; i++) {
+  if (i % 3 === 0 && i % 5 === 0)  {
+    console.log('FizzBuzz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  } else {
+    console.log(i);
   }
 }
 
