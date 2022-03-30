@@ -22,7 +22,7 @@ const filter = (arr, pred) => {
       newA.push(arr[i]);
     }
   }
-  return a;
+  return newA;
 };
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
