@@ -36,7 +36,7 @@ Instructions: Write a function which takes an array and returns a new array,
 const map = (arr, func) => {
   let newA = [];
   for (let i = 0; i < arr.length; i += 1) {
-    newA[i] = func(arr[i]);
+    newA[i].push(func(arr[i]));
   }
   return newA;
 };
@@ -83,7 +83,7 @@ Bonus: Create a function called sumSquares that takes an array and returns
 const sumSquares = (arr) => {
   const a = [];
   for (let i = 0; i < arr.length; i += 1) {
-    a[i] = arr[i] * arr[i];
+    a[i] = arr[i] **2;
   }
   return reduce(a, add, 0);
 };
