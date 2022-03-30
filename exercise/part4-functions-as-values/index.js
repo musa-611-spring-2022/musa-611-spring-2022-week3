@@ -14,15 +14,14 @@ Instructions: Write a function which takes an array and returns a new array,
   function that takes one item as input and returns either true or false based
   on whether the item satisfies some condition).
 ===================== */
-
-const filter = (arr, pred) => {
-  let newA = [];
+let filter = (arr, pred) => {
+  let result = [];
   for (const i of arr) {
     if (pred(i)) {
-      newA.push(i);
+      result.push(i);
     }
   }
-  return newA;
+  return result;
 };
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
@@ -33,12 +32,12 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-const map = (arr, func) => {
-  let newA = [];
+let map = (arr, func) => {
+  let result = [];
   for (const i of arr) {
-    newA.push(func(i));
+    result.push(func(i));
   }
-  return newA;
+  return result;
 };
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -61,12 +60,12 @@ Instructions: Write a function which takes an array and returns the value of
     add(    9     ,     7   ); //   16  <-- final reduced value
 ===================== */
 
-const reduce = (arr, func, initial) => {
-  let r = initial;
+let reduce = (arr, func, initial) => {
+  let result = initial;
   for (const i of arr) {
-    r = func(r,i);
+    result = func(result, i);
   }
-  return r;
+  return result;
 };
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);

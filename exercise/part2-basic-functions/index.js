@@ -56,7 +56,7 @@ Instructions: "Write a function that returns the value of an array at a specifie
 Example: "valueAtIndex(['Mercury', 'Venus', 'Earth', 'Mars'], 2) should return 'Earth'"
 ===================== */
 
-const valueAtIndex = (list, index) => list[index];
+const valueAtIndex = (l, i) => l[i];
 
 console.log('valueAtIndex success:', valueAtIndex([9, 8, 7, 6, 5], 2) === 7);
 
@@ -65,7 +65,7 @@ Instructions: "Write a function that returns the value of an object at a specifi
 Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
-const valueAtKey = (dict, index) => dict[index];
+const valueAtKey = (d, i) => d[i];
 
 console.log('valueAtKey success:', valueAtKey({ foo: 'bar' }, 'foo') === 'bar');
 
