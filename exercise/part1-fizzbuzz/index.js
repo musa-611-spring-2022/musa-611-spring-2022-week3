@@ -26,30 +26,30 @@ Start code
 ===================== */
 
 // First part
-function ranger() {
-  let i = 0;
-  for (i = 1; i < 101; i++) {
-      console.log(i);
-  }
-}
+//function ranger() {
+//  let i = 0;
+//  for (i = 1; i < 101; i++) {
+//      console.log(i);
+//  }
+//}
 
-ranger();
+//ranger();
 
 // Second part
-function rangerNew() {
-  let i = 0;
-  for (i = 1; i < 101; i++) {
-      if (i % 3 == 0) {
-          console.log('Fizz');
-      } else if (i % 5 == 0) {
-          console.log('Buzz');
-      } else {
-          console.log(i);
-    }
-  }
-}
+//function rangerNew() {
+  //let i = 0;
+  //for (i = 1; i < 101; i++) {
+      //if (i % 3 == 0) {
+          //console.log('Fizz');
+      //} else if (i % 5 == 0) {
+        //  console.log('Buzz');
+      //} else {
+        //  console.log(i);
+    //}
+  //}
+//}
 
-rangerNew();
+//rangerNew();
 
 // Third Part
 function rangerNewer() {
