@@ -104,7 +104,7 @@ Instructions: Write a function that returns true if a number is odd.
 ===================== */
 
 function isOdd(number) {
-  if (number % 2 !== 0) {
+  if (number % 2 === 1) {
     return true;
   } else {
     return false;
