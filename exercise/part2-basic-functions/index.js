@@ -83,7 +83,7 @@ function valueAtKey(dict, key) {
   return value;
 }
 
-console.log('valueAtKey success:', valueAtKey( {'foo': 'bar'} , 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey({ 'foo': 'bar' }, 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
@@ -92,7 +92,7 @@ Instructions: Write a function that returns true if a number is even.
 function isEven(number) {
   if (number % 2 === 0) {
     return true;
-  } else if (number % 2 !== 0) {
+  } else {
     return false;
   }
 }
@@ -106,7 +106,7 @@ Instructions: Write a function that returns true if a number is odd.
 function isOdd(number) {
   if (number % 2 !== 0) {
     return true;
-  } else if (number % 2 === 0) {
+  } else {
     return false;
   }
 }

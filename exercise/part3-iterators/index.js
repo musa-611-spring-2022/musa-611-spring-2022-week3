@@ -33,6 +33,8 @@ Instructions: Write a function which takes an array and returns a new array with
 function isEven(number) {
   if (number % 2 === 0) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -55,6 +57,8 @@ Instructions: Write a function which takes an array and returns a new array with
 function isOdd(number) {
   if (number % 2 !== 0) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -120,8 +124,9 @@ function add(num1, num2) {
 
 function reduceSum(array) {
   let count = 0;
+  let i = 0;
   for (i = 0; i < array.length; ++i) {
-      count = add(count, array[i]);
+    count = add(count, array[i]);
   }
   return count;
 }
@@ -143,8 +148,9 @@ function multiply(num1, num2) {
 
 function reduceProduct(array) {
   let product = 1;
+  let i = 0;
   for (i = 0; i < array.length; ++i) {
-      product = multiply(product, array[i]);
+    product = multiply(product, array[i]);
   }
   return product;
 }

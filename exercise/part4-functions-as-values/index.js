@@ -22,6 +22,8 @@ function filterEven(array) {
   array.forEach((v) => {
     if (isEven(v) === true) {
       evenArray.push(v);
+    } else if (isEven(v) === false) {
+      evenArray;
     }
   });
   return evenArray;
@@ -33,6 +35,8 @@ function filterOdd(array) {
   array.forEach((v) => {
     if (isOdd(v) === true) {
       oddArray.push(v);
+    } else if (isOdd(v) === false) {
+      oddArray;
     }
   });
   return oddArray;
@@ -41,6 +45,7 @@ function filterOdd(array) {
 
 
 function filter(array, pred) {
+  let filterArray = [];
   if (pred === isOdd) {
     filterArray = filterOdd(array);
   } else {
