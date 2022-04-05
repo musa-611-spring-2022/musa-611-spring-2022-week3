@@ -79,11 +79,11 @@ Example: "valueAtKey({'name': 'Nathan'}, 'name') should return 'Nathan'"
 ===================== */
 
 function valueAtKey(dict, key) {
-  var value = dict[key];
+  let value = dict[key];
   return value;
 }
 
-console.log('valueAtKey success:', valueAtKey({'foo': 'bar'}, 'foo') === 'bar');
+console.log('valueAtKey success:', valueAtKey( {'foo': 'bar'} , 'foo') === 'bar');
 
 /* =====================
 Instructions: Write a function that returns true if a number is even.
@@ -91,9 +91,7 @@ Instructions: Write a function that returns true if a number is even.
 
 function isEven(number) {
   if (number % 2 === 0) {
-      return true;
-  } else {
-      return false;
+    return true;
   }
 }
 
@@ -105,9 +103,7 @@ Instructions: Write a function that returns true if a number is odd.
 
 function isOdd(number) {
   if (number % 2 !== 0) {
-      return true;
-  } else {
-      return false;
+    return true;
   }
 }
 

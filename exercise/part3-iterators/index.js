@@ -5,7 +5,8 @@ A core part of data manipulation in JavaScript is looping over values in an
 array and performing some operations on those values. In this exercise we will
 practice some of the most common types of iterative operations.
 
-Functions that `return` can be passed as values to other functions. Each exercise here builds on that theme.
+Functions that `return` can be passed as values to other functions. Each exercise
+here builds on that theme.
 ===================== */
 
 /* =====================
@@ -13,13 +14,11 @@ Instructions: Write a function which counts the number of times a value occurs i
 Example: countItem(['a', 'b', 'a'], 'a') should return 2
 ===================== */
 
-let array = [];
-let value = 0;
 
-function countItem(array,value) {
-    var count = 0;
-    array.forEach((v) => (v === value && count++));
-    return count;
+function countItem(array, value) {
+  let count = 0;
+  array.forEach((v) => (v === value && count++));
+  return count;
 }
 
 console.log('countItem success:', countItem([1, 2, 3, 4, 5, 4, 4], 4) === 3);
@@ -31,22 +30,17 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let number = 0;
-
 function isEven(number) {
-    if (number%2===0) {
-        return true;
-    } else {
-        return false;
-    }
+  if (number % 2 === 0) {
+    return true;
+  }
 }
 
-let evenArray = [];
 
 function filterEven(array) {
-    var evenArray = [];
-    array.forEach((v) => (isEven(v)===true && evenArray.push(v)));
-    return evenArray;
+  let evenArray = [];
+  array.forEach((v) => (isEven(v) === true && evenArray.push(v)));
+  return evenArray;
 }
 
 
@@ -59,19 +53,16 @@ Instructions: Write a function which takes an array and returns a new array with
 ===================== */
 
 function isOdd(number) {
-    if (number%2!==0) {
-        return true;
-    } else {
-        return false;
-    }
+  if (number % 2 !== 0) {
+    return true;
+  }
 }
 
-let oddArray = [];
 
 function filterOdd(array) {
-    var oddArray = [];
-    array.forEach((v) => (isOdd(v)===true && oddArray.push(v)));
-    return oddArray;
+  let oddArray = [];
+  array.forEach((v) => (isOdd(v) === true && oddArray.push(v)));
+  return oddArray;
 }
 
 
@@ -84,16 +75,14 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let incArray = [];
-
 function plusOne(number) {
-    return number + 1;
+  return number + 1;
 }
 
 function mapIncrement(array) {
-    var incArray = [];
-    array.forEach((v) => (incArray.push(plusOne(v))));
-    return incArray;
+  let incArray = [];
+  array.forEach((v) => (incArray.push(plusOne(v))));
+  return incArray;
 }
 
 console.log('mapIncrement success:', _(mapIncrement([1, 2, 3, 4, 5, 4, 4])).isEqual([2, 3, 4, 5, 6, 5, 5]));
@@ -105,16 +94,14 @@ Instructions: Write a function which takes an array and returns a new array with
   original array.
 ===================== */
 
-let tripArray = [];
-
 function timesThree(number) {
-    return number * 3;
+  return number * 3;
 }
 
 function mapTriple(array) {
-    var tripArray = [];
-    array.forEach((v) => (tripArray.push(timesThree(v))));
-    return tripArray;
+  let tripArray = [];
+  array.forEach((v) => (tripArray.push(timesThree(v))));
+  return tripArray;
 }
 
 console.log('mapTriple success:', _(mapTriple([1, 2, 3, 4, 5, 4, 4])).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -126,21 +113,17 @@ Instructions: Write a function which takes an array and returns the sum of all
   array.
 ===================== */
 
-let num1 = 0;
-let num2 = 0;
-var count = 0
-
-function add(num1,num2) {
-    return num1 + num2;
+function add(num1, num2) {
+  return num1 + num2;
 }
 
 
 function reduceSum(array) {
-    var count = 0;
-    for (i=0; i<array.length; ++i) {
-        count = add(count,array[i]);
-    }
-    return count;
+  let count = 0;
+  for (i = 0; i < array.length; ++i) {
+      count = add(count, array[i]);
+  }
+  return count;
 }
 
 
@@ -153,19 +136,17 @@ Instructions: Write a function which takes an array and returns the product of
   original array.
 ===================== */
 
-var product = 1;
-
-function multiply(num1,num2) {
-    return num1 * num2;
+function multiply(num1, num2) {
+  return num1 * num2;
 }
 
 
 function reduceProduct(array) {
-    var product = 1;
-    for (i=0; i<array.length; ++i) {
-        product = multiply(product,array[i]);
-    }
-    return product;
+  let product = 1;
+  for (i = 0; i < array.length; ++i) {
+      product = multiply(product, array[i]);
+  }
+  return product;
 }
 
 console.log('reduceProduct success:', reduceProduct([1, 2, 3, 4, 5, 4, 4]) === 1920);

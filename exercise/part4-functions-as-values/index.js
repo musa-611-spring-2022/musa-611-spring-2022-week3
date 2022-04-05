@@ -16,49 +16,31 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
-let filterArray = [];
-
-function isEven(number) {
-    if (number%2===0) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-let evenArray = [];
-
-
 function filterEven(array) {
-    var evenArray = [];
-    array.forEach((v) => (isEven(v)===true && evenArray.push(v)));
-    return evenArray;
-}
-
-
-function isOdd(number) {
-    if (number%2!==0) {
-        return true;
-    } else {
-        return false;
+  let evenArray = [];
+  array.forEach((v) => {
+    if (isEven(v) === true) {
+      evenArray.push(v);
     }
-}
+  }) return evenArray;
+} 
 
-let oddArray = [];
+
+
 
 function filterOdd(array) {
-    var oddArray = [];
-    array.forEach((v) => (isOdd(v)===true && oddArray.push(v)));
-    return oddArray;
+  let oddArray = [];
+  array.forEach((v) => (isOdd(v) === true && oddArray.push(v)));
+  return oddArray;
 }
 
 
 function filter(array, pred) {
-    if (pred === isOdd) {
-        filterArray = filterOdd(array);
-    } else {
-        filterArray = filterEven(array);
-    } return filterArray;
+  if (pred === isOdd) {
+    filterArray = filterOdd(array);
+  } else {
+    filterArray = filterEven(array);
+  } return filterArray;
 }
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
@@ -69,38 +51,26 @@ Instructions: Write a function which takes an array and returns a new array,
   where each item has a function applied to it.
 ===================== */
 
-let mapArray = [];
-
-let incArray = [];
-
-function plusOne(number) {
-    return number + 1;
-}
 
 function mapIncrement(array) {
-    var incArray = [];
-    array.forEach((v) => (incArray.push(plusOne(v))));
-    return incArray;
+  let incArray = [];
+  array.forEach((v) => (incArray.push(plusOne(v))));
+  return incArray;
 }
 
-let tripArray = [];
-
-function timesThree(number) {
-    return number * 3;
-}
 
 function mapTriple(array) {
-    var tripArray = [];
-    array.forEach((v) => (tripArray.push(timesThree(v))));
-    return tripArray;
+  let tripArray = [];
+  array.forEach((v) => (tripArray.push(timesThree(v))));
+  return tripArray;
 }
 
-function map(array,func) {
-    if (func === plusOne) {
-        mapArray = mapIncrement(array);
-    } else {
-        mapArray = mapTriple(array);
-    } return mapArray;
+function map(array, func) {
+  if (func === plusOne) {
+    mapArray = mapIncrement(array);
+  } else {
+    mapArray = mapTriple(array);
+  } return mapArray;
 }
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
