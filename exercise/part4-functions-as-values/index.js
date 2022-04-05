@@ -15,39 +15,18 @@ Instructions: Write a function which takes an array and returns a new array,
   function that takes one item as input and returns either true or false based
   on whether the item satisfies some condition).
 ===================== */
-
-
-function filterEven(array) {
-  let evenArray = [];
-  array.forEach((v) => {
-    if (isEven(v) === true) {
-      evenArray.push(v);
-    }
-  });
-  return evenArray;
-}
-
-
-function filterOdd(array) {
-  let oddArray = [];
-  array.forEach((v) => {
-    if (isOdd(v) === true) {
-      oddArray.push(v);
-    }
-  });
-  return oddArray;
-}
-
-
-
 function filter(array, pred) {
   let filterArray = [];
-  if (pred === isOdd) {
-    filterArray = filterOdd(array);
-  } else {
-    filterArray = filterEven(array);
-  } return filterArray;
+  for (let i = 0; i < array.length; ++i) {
+    let currentValue = array[i];
+    let value = pred(currentValue);
+    if (value === true) {
+      filterArray.push(currentValue);
+    }
+  }
+  return filterArray;
 }
+
 
 console.log('filter success #1:', _(filter([1, 2, 3, 4, 5, 4, 4], isEven)).isEqual([2, 4, 4, 4]));
 console.log('filter success #2:', _(filter([1, 2, 3, 4, 5, 4, 4], isOdd)).isEqual([1, 3, 5]));
