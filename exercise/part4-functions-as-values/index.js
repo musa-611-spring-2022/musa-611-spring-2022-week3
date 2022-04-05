@@ -72,6 +72,7 @@ function mapTriple(array) {
 }
 
 function map(array, func) {
+  let mapArray = [];
   if (func === plusOne) {
     mapArray = mapIncrement(array);
   } else {
@@ -102,7 +103,16 @@ Instructions: Write a function which takes an array and returns the value of
 
 ===================== */
 
-let reduce = (arr, func, initial) => { return arr.reduce(func, initial)};
+// let reduce = (arr, func, initial) => { return arr.reduce(func, initial) };
+function reduce(array, func, initial) {
+  let value = initial;
+  for (let i = 0; i < array.length; ++i) {
+    let currentValue = array[i]
+    value = func(value, currentValue)
+  }
+  return value;
+}
+
 
 console.log('reduce success #1:', reduce([1, 2, 3, 4, 5, 4, 4], add, 0) === 23);
 console.log('reduce success #2:', reduce([1, 2, 3, 4, 5, 4, 4], multiply, 1) === 1920);
@@ -115,23 +125,21 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-var sum = 0;
-
 function reduceProduct(array) {
-    var product = 1;
-    for (i=0; i<array.length; ++i) {
-        product = multiply(product,array[i]);
-    }
-    return product;
+  let product = 1;
+  for (let i = 0; i < array.length; ++i) {
+    product = multiply(product, array[i]);
+  }
+  return product;
 }
 
 function sumSquares(array) {
-    var sum = 0;
-    for (i=0; i<array.length; ++i) {
-        square = array[i] * array[i];
-        sum = sum + square;
-    }
-    return sum;
+  let sum = 0;
+  for (let i = 0; i < array.length; ++i) {
+      square = array[i] * array[i];
+      sum = sum + square;
+  }
+  return sum;
 }
 
 console.log('sumSquares success:', sumSquares([1, 2, 3, 4]) === 30);
