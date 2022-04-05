@@ -28,13 +28,16 @@ function filterEven(array) {
 }
 
 
-
-
 function filterOdd(array) {
   let oddArray = [];
-  array.forEach((v) => (isOdd(v) === true && oddArray.push(v)));
+  array.forEach((v) => {
+    if (isOdd(v) === true) {
+      oddArray.push(v);
+    }
+  });
   return oddArray;
 }
+
 
 
 function filter(array, pred) {
