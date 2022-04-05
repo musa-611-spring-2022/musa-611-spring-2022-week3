@@ -16,14 +16,16 @@ Instructions: Write a function which takes an array and returns a new array,
   on whether the item satisfies some condition).
 ===================== */
 
+
 function filterEven(array) {
   let evenArray = [];
   array.forEach((v) => {
     if (isEven(v) === true) {
       evenArray.push(v);
     }
-  }) return evenArray;
-} 
+  });
+  return evenArray;
+}
 
 
 
