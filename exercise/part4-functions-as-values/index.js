@@ -58,27 +58,16 @@ Instructions: Write a function which takes an array and returns a new array,
 ===================== */
 
 
-function mapIncrement(array) {
-  let incArray = [];
-  array.forEach((v) => (incArray.push(plusOne(v))));
-  return incArray;
-}
-
-
-function mapTriple(array) {
-  let tripArray = [];
-  array.forEach((v) => (tripArray.push(timesThree(v))));
-  return tripArray;
-}
-
 function map(array, func) {
   let mapArray = [];
-  if (func === plusOne) {
-    mapArray = mapIncrement(array);
-  } else {
-    mapArray = mapTriple(array);
-  } return mapArray;
+  for (let i = 0; i < array.length; ++i) {
+    let value = func(i);
+    mapArray.push(value)
+  }
+  return mapArray;
 }
+
+
 
 console.log('map success #1:', _(map([1, 2, 3, 4, 5, 4, 4], plusOne)).isEqual([2, 3, 4, 5, 6, 5, 5]));
 console.log('map success #2:', _(map([1, 2, 3, 4, 5, 4, 4], timesThree)).isEqual([3, 6, 9, 12, 15, 12, 12]));
@@ -107,8 +96,8 @@ Instructions: Write a function which takes an array and returns the value of
 function reduce(array, func, initial) {
   let value = initial;
   for (let i = 0; i < array.length; ++i) {
-    let currentValue = array[i]
-    value = func(value, currentValue)
+    let currentValue = array[i];
+    value = func(value, currentValue);
   }
   return value;
 }
@@ -125,19 +114,12 @@ Bonus: Create a function called sumSquares that takes an array and returns
   `multiply` functions that you developed before).
 ===================== */
 
-function reduceProduct(array) {
-  let product = 1;
-  for (let i = 0; i < array.length; ++i) {
-    product = multiply(product, array[i]);
-  }
-  return product;
-}
 
 function sumSquares(array) {
   let sum = 0;
   for (let i = 0; i < array.length; ++i) {
-      square = array[i] * array[i];
-      sum = sum + square;
+    let square = array[i] * array[i];
+    sum = sum + square;
   }
   return sum;
 }
