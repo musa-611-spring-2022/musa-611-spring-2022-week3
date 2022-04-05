@@ -81,14 +81,27 @@ Create a new variable "publicHighSchools" that only contains data for the public
 high schools in Philadelphia. Figure out how you can identify which schools have
 high schools (hint: another attribute besides TYPE will be useful...).
 ===================== */
+
+const pubs = [];
+
+schools.forEach((school) => {
+  const id = school.TYPE_SPECIFIC;
+  if (id === 'DISTRICT' || id === 'CONTRACTED') {
+    pubs.push(school);
+  }
+});
+
+
 let identifier = 'HIGH';
 const publicHighSchools = [];
 
 
-schools.forEach((school) => {
-  const grade_level = school.GRADE_LEVEL;
-  if (grade_level.includes(identifier)==true) {
-    publicHighSchools.push(school);}})
+pubs.forEach((school) => {
+  const gradeLevel = school.GRADE_LEVEL;
+  if (gradeLevel.includes(identifier) === true) {
+    publicHighSchools.push(school);
+  }
+});
 
 
 /* =====================
@@ -99,5 +112,5 @@ Add a tooltip to each marker that contains the name of the school.
 
 ===================== */
 publicHighSchools.forEach((school) => {
-  L.marker([school.Y,school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
-})
+  L.marker([school.Y, school.X]).bindTooltip(school.SCHOOL_NAME).addTo(map);
+});

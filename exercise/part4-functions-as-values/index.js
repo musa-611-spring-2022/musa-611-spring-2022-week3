@@ -61,8 +61,9 @@ Instructions: Write a function which takes an array and returns a new array,
 function map(array, func) {
   let mapArray = [];
   for (let i = 0; i < array.length; ++i) {
-    let value = func(i);
-    mapArray.push(value)
+    let currentValue = array[i];
+    let value = func(currentValue);
+    mapArray.push(value);
   }
   return mapArray;
 }
@@ -119,7 +120,7 @@ function sumSquares(array) {
   let sum = 0;
   for (let i = 0; i < array.length; ++i) {
     let square = array[i] * array[i];
-    sum = sum + square;
+    sum += square;
   }
   return sum;
 }
